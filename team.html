@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Members</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            /* background-color: #6693c1; */
+            /* background-color: #319546; */
+            background: radial-gradient(circle, #62b3f9 0%, #001f4a 100%);
+            /* background-color: #014a8a; */
+        }
+
+        .btn-custom {
+            /* background: white; */
+            outline: 2px solid white;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .btn-custom:hover {
+            background: white;
+            color: #001f4a;
+        }
+
+        .team-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.3);
+            /* Semi-transparent */
+            backdrop-filter: blur(10px);
+            /* Frosted glass effect */
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            /* Subtle border */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Soft shadow */
+            padding: 20px;
+            color: white;
+            width: 300px;
+            text-align: center;
+        }
+
+        .team-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .team-card img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+            border-radius: 10px;
+        }
+
+        .team-card:hover img {
+            transform: rotate(5deg);
+        }
+
+        .team-card .card-body {
+            text-align: center;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 20px;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #f1c40f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+
+        <a href="about.html#team" class="btn-custom">← Back to the About Us</a>
+
+        <h1 class="text-center text-white mb-2">Meet Our Team</h1>
+        <h3 class="text-center text-white mb-5">Our team is our strength, and we can say it out loud</h3>
+
+        <div class="row justify-content-center gy-4">
+            
+            <!-- Member 1 -->
+            <div class="col-md-3">
+                <div class="card team-card">
+                    <img src="https://i.pinimg.com/736x/5b/cf/1b/5bcf1b2636aae39616d08ee72d1b9569.jpg"
+                        class="card-img-top" alt="Member 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Sayak Mondal</h5>
+                        <p class="card-text">Data Scientist</p>
+                        <hr>
+                        <div class="social-icons">
+                            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="col-md-3">
+                <div class="card team-card">
+                    <img src="https://i.pinimg.com/736x/e8/8c/76/e88c7697f569f1f2ef3de1c853baf64a.jpg"
+                        class="card-img-top" alt="Member 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Rohan Roy Karmakar</h5>
+                        <p class="card-text">IT Analyst</p>
+                        <hr>
+                        <div class="social-icons">
+                            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="col-md-3">
+                <div class="card team-card">
+                    <img src="https://i.pinimg.com/474x/5f/67/b6/5f67b6629070acaa96f3c7ab7b059c97.jpg"
+                        class="card-img-top" alt="Member 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Rahul Dey</h5>
+                        <p class="card-text">Jr. Data Scientist</p>
+                        <hr>
+                        <div class="social-icons">
+                            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 4 -->
+            <div class="col-md-3">
+                <div class="card team-card">
+                    <img src="https://i.pinimg.com/474x/66/54/8b/66548bc0b570183d0f65f365e3e5b25d.jpg"
+                        class="card-img-top" alt="Member 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Madhura Sarkar</h5>
+                        <p class="card-text">Jr. Software Developer</p>
+                        <hr>
+                        <div class="social-icons">
+                            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 5 -->
+            <div class="col-md-3">
+                <div class="card team-card">
+                    <img src="https://i.pinimg.com/474x/8e/af/ae/8eafae5ceca02c663fa5ffb04d19e540.jpg"
+                        class="card-img-top" alt="Member 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Sananda Das</h5>
+                        <p class="card-text">Digital Process Associate</p>
+                        <hr>
+                        <div class="social-icons">
+                            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 6 -->
+            <div class="col-md-3">
+                <div class="card team-card">
+                    <img src="https://i.pinimg.com/474x/79/9d/07/799d0731d1aa0a3cf96847b0221a9df3.jpg"
+                        class="card-img-top" alt="Member 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Srishti Pal</h5>
+                        <p class="card-text">Graphic Design</p>
+                        <hr>
+                        <div class="social-icons">
+                            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 7 -->
+            <div class="col-md-3">
+                <div class="card team-card">
+                    <img src="https://i.pinimg.com/474x/cb/1f/14/cb1f14997c2a823e63f3ebba4aa5aca2.jpg"
+                        class="card-img-top" alt="Member 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Anwesha Chakraborty</h5>
+                        <p class="card-text">Digital Process Associate</p>
+                        <hr>
+                        <div class="social-icons">
+                            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member 8 -->
+            <div class="col-md-3">
+                <div class="card team-card">
+                    <img src="https://i.pinimg.com/736x/e7/10/d0/e710d003217d6025515966e72125520b.jpg"
+                        class="card-img-top" alt="Member 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Srishti Pal</h5>
+                        <p class="card-text">Digital Process Associate</p>
+                        <hr>
+                        <div class="social-icons">
+                            <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" title="Email"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
+
+
+
+            <!-- more members  -->
+        </div>
+    </div>
+
+</body>
+
+</html>

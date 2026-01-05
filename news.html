@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- bootstrap meta and others  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Basic Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Century Media360 - Creative Marketing Agency</title>
+
+    <!-- SEO Meta -->
+    <meta name="description"
+        content="Century Media360 is a global creative marketing agency offering strategy, branding, digital solutions, and growth-driven campaigns.">
+    <meta name="keywords"
+        content="Century Media360, marketing agency, creative agency, digital marketing, branding, global strategy, Canada, SEO, design, social media">
+    <meta name="author" content="Century Media360">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About Us | Century Media360">
+    <meta property="og:description"
+        content="Learn about Century Media360 — a full-service marketing agency blending creativity, strategy, and results.">
+    <meta property="og:image" content="https://www.centurymedia360.com/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://www.centurymedia360.com/about">
+    <meta property="og:site_name" content="Century Media360">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Us | Century Media360">
+    <meta name="twitter:description"
+        content="Century Media360 is your strategic partner in marketing success, with a global reach and creative approach.">
+    <meta name="twitter:image" content="https://www.centurymedia360.com/assets/images/twitter-card.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+</head>
+<style>
+    body {
+        /* background-color: #F3F3F3; */
+        background: url('assets/media_bodybg.png');
+    }
+</style>
+
+<body>
+
+    <!-- mousepointer effect  -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+
+    <!-- nav bar section  -->
+    <nav class="navbar navbar-expand-lg py-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="logo-container">
+                    <img src="assets/logotag.jpg" alt="logo">
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav bg-white px-4 py-2 navbar-custom">
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">SERVICES</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            MARKETPLACE
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="advertisers.html">Advertisers</a></li>
+                            <li><a class="dropdown-item" href="publishers.html">Publishers </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" style="color: #6cb246;" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            MEDIA
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="#"
+                                    style="color: #6cb246; background: none;">News</a></li>
+                            <li><a class="dropdown-item" href="blog.html">Blogs</a></li>
+                            <li><a class="dropdown-item" href="portfolio.html">Portfolio</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="career.html">CAREER</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- carousel img -->
+    <div class="carousel d-flex justify-content-center">
+        <img src="assets/newscarousel.png" alt="">
+    </div>
+
+    <!-- blog page main content  -->
+    <section class="main" style="margin-top: 50px;">
+        <!-- Toggle Search Button (Visible on Mobile) -->
+        <button class="btn btn-primary search-toggle-btn" onclick="toggleSearch()">
+            <i class="bi bi-search"></i>
+        </button>
+
+        <!-- Search Sidebar -->
+        <div class="search-sidebar" id="searchSidebar">
+            <button class="btn btn-danger w-100 mb-3" onclick="toggleSearch()">Close</button>
+            <div class="search-box mb-3">
+                <input type="text" placeholder="Search...">
+                <i class="bi bi-search"></i>
+            </div>
+        </div>
+
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row row-cols-1 row-cols-1 g-4" id="blog-list">
+                        <!-- Blog posts will be injected dynamically  -->
+                    </div>
+
+                    <!-- pagination controls  -->
+                    <div class="pagination-btn">
+                        <button class="btn btn-light" id="prevPage">&larr; Prev</button>
+                        <span id="pageNumber">Page 1</span>
+                        <button class="btn btn-light" id="nextPage">Next &rarr;</button>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="sidebar">
+                        <div class="search-box mb-3">
+                            <input type="text" style="box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.2);"
+                                placeholder="Search...">
+                            <i class="bi bi-search"></i>
+                        </div>
+                        <h5 class="mt-3">Timeline</h5>
+                        <span class="badge bg-light border" style="color: #014a8a;" data-date="2025-02">All</span>
+                        <span class="badge bg-light border filter-timeline" style="color: #014a8a;"
+                            data-date="2025">2025</span>
+                        <span class="badge bg-light border filter-timeline" style="color: #014a8a;"
+                            data-date="2024">2024</span>
+                        <span class="badge bg-light border filter-timeline" style="color: #014a8a;"
+                            data-date="2023">2023</span>
+                        <span class="badge bg-light border filter-timeline" style="color: #014a8a;"
+                            data-date="2022">2022</span>
+                        <span class="badge bg-light border filter-timeline" style="color: #014a8a;"
+                            data-date="2021">2021</span>
+                        <span class="badge bg-light border filter-timeline" style="color: #014a8a;"
+                            data-date="2020">2020</span>
+                        <h5 class="mt-3">Recent Post</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="badge bg-light border"
+                                    style="color: #014a8a; text-decoration: none;">World Literacy Day</a></li>
+                            <li><a href="#" class="badge bg-light border"
+                                    style="color: #014a8a; text-decoration: none;">International Mother Language Day
+                                    2023</a></li>
+                            <li><a href="#" class="badge bg-light border"
+                                    style="color: #014a8a; text-decoration: none;">World Health Day 2022</a></li>
+                            <li><a href="#" class="badge bg-light border"
+                                    style="color: #014a8a; text-decoration: none;">World Radio Day</a></li>
+                            <li><a href="#" class="badge bg-light border"
+                                    style="color: #014a8a; text-decoration: none;">Human Rights Day</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- blog page main content ends -->
+
+
+
+    <!-- Footer  -->
+    <footer class="container bg-white text-start my-5 footer">
+        <div class="row">
+            <!-- Company Info -->
+            <div class="col-md-4">
+                <h5>Century Media360</h5>
+                <p>A Trusted Advertising Agency in UK - Experienced in Digital Branding & Advertisement, renowned for
+                    its Commitment & Gratitude towards Clients Service.</p>
+            </div>
+
+            <!-- Services -->
+            <div class="col-md-2">
+                <h5>Service</h5>
+                <ul class="list-unstyled">
+                    <li><a href="service.html">Affiliate Marketing</a></li>
+                    <li><a href="service.html">Email Marketing</a></li>
+                    <li><a href="service.html">Data Analysis</a></li>
+                    <li><a href="service.html">Web Design</a></li>
+                    <li><a href="service.html">Development</a></li>
+                    <li><a href="service.html">SEO</a></li>
+                </ul>
+            </div>
+
+            <!-- Company Links -->
+            <div class="col-md-2">
+                <h5>Company</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="advertisers.html">Marketplace</a></li>
+                    <li><a href="blog.html">Media</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="col-md-4">
+                <h5>Join a Newsletter</h5>
+                <input type="email" class="newsletter-input" placeholder="Enter Your Email">
+                <button class="subscribe-btn w-100 mt-2">Subscribe</button>
+                <!-- Social Icons -->
+                <div class="social-icons mt-3">
+                    <a href="https://www.linkedin.com/company/centurymedia360/posts/?feedView=all" target="_blank"
+                        title="Linkedin"><i class="fab fa-linkedin-in text-white"></i></a>
+                    <a href="https://www.facebook.com/centurymedia360/" target="_blank" title="Facebook"><i
+                            class="fab fa-facebook-f text-white"></i></a>
+                    <a href="https://www.instagram.com/centurymedia360/" target="_blank" title="Instagram"> <i
+                            class="fab fa-instagram text-white"></i></a>
+                    <a href="https://x.com/centurymedia360" target="_blank" title="twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M9.294 6.928L14.357 1h-1.2L8.762 6.147L5.25 1H1.2l5.31 7.784L1.2 15h1.2l4.642-5.436L10.751 15h4.05zM7.651 8.852l-.538-.775L2.832 1.91h1.843l3.454 4.977l.538.775l4.491 6.47h-1.843z"/></svg></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom mt-3 d-flex justify-content-around">
+            <p>&copy; Century Media360. All rights reserved 2017 - 2025.</p>
+            <p>
+                📍 The Pied Horse, Hatfield Road, United Kingdom |
+                ✉️ <a href="mailto:info@centurymedia360.com">info@centurymedia360.com</a> |
+                📞 +44 738 689 9960
+            </p>
+        </div>
+    </footer>
+    <!-- Footer ends  -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- scirpt for mousepointer  -->
+    <script>
+        const coords = { x: 0, y: 0 };
+        const circles = document.querySelectorAll(".circle");
+
+        const colors = [
+            "#014a8a", "#04508f", "#0a5a97", "#1365a0", "#1a70a8", // Deep to Medium Blue
+            "#2682c0", "#2e8dcb", "#3699d6", "#3ea4e1", "#47b0ec", // Light Blue to Teal Transition
+            "#4fadf0", "#5ab352", "#64b957", "#6bb04b", "#72b651", // Teal to Green Transition
+            "#6cb246", "#7fc157", "#86c85a", "#8ecd61", "#95d367", // Light Green
+            "#9cd96e", "#a4df74" // Bright Green End
+        ];
+
+        circles.forEach(function (circle, index) {
+            circle.x = 0;
+            circle.y = 0;
+            circle.style.backgroundColor = colors[index % colors.length];
+        });
+
+        window.addEventListener("mousemove", function (e) {
+            coords.x = e.clientX;
+            coords.y = e.clientY;
+
+        });
+
+        function animateCircles() {
+
+            let x = coords.x;
+            let y = coords.y;
+
+            circles.forEach(function (circle, index) {
+                circle.style.left = x - 12 + "px";
+                circle.style.top = y - 12 + "px";
+
+                circle.style.scale = (circles.length - index) / circles.length;
+
+                circle.x = x;
+                circle.y = y;
+
+                const nextCircle = circles[index + 1] || circles[0];
+                x += (nextCircle.x - x) * 0.3;
+                y += (nextCircle.y - y) * 0.3;
+            });
+
+            requestAnimationFrame(animateCircles);
+        }
+
+        animateCircles();
+
+    </script>
+
+    <!-- script for side toggle search button in smaller device  -->
+    <script>
+        function toggleSearch() {
+            const searchSidebar = document.getElementById("searchSidebar");
+            searchSidebar.classList.toggle("show");
+        }
+    </script>
+
+    <!-- script for dynamic post content and pagination  -->
+    <script>
+        function toggleSearch() {
+            const searchSidebar = document.getElementById("searchSidebar");
+            searchSidebar.classList.toggle("show");
+        }
+
+        // Dummy Blog Data (Replace this with real API data)
+        const blogPosts = [
+            { title: "World Literacy Day", date: "2024-09-09", image: "assets/worldliteracyday.png", content: "Education is the fundamental towards a race civilization. Understanding the importance of education UNESCO at their 14th annual General Conference held on the 26th of...", link: "https://centurymedia360.com/importance-of-world-literacy-day/" },
+            { title: "International Mother Language Day 2023", date: "2023-02-21", image: "assets/internationmotherlanguageday.png", content: "Every year on February 21st, International Mother Language Day is celebrate around the world to recognize the importance of linguistic and cultural diversity...", link: "https://centurymedia360.com/international-mother-language-day-2/" },
+            { title: "World Health Day 2022", date: "2022-04-07", image: "assets/worldhealthday.png", content: "We’ve all heard of a phrase before which says that Health is our absolute wealth. But do we care about our health? Do we really prioritize our health concerns? In today’s fast pacing world health...", link: "https://centurymedia360.com/world-health-day-2022/" },
+            { title: "World Radio Day", date: "2021-02-12", image: "assets/worldradioday.png", content: "Radio is a kind of an infinite existence till now. The infinity that has ruled over the past, ruling the present, and will rule the eternity future. It has been...", link: "https://centurymedia360.com/world-radio-day/" },
+            { title: "Human Rights Day", date: "2020-12-10", image: "assets/humanrightsday.png", content: "The word ‘Human Rights’ though comprises of two words with the addition of ten alphabets in total. Yet, it has a meaning with the vast power of teaching our society, a great deal of intelligence...", link: "https://centurymedia360.com/human-rights-day/" }
+
+        ];
+
+        // Pagination Variables
+        const postsPerPage = 5;
+        let currentPage = 1;
+        let currentFilter = null;
+
+        // Function to display posts based on the selected year
+        function displayPosts(filterDate = null) {
+            const blogList = document.getElementById("blog-list");
+            blogList.innerHTML = "";  // Clear previous posts
+
+            let filteredPosts = blogPosts;
+
+            // Filter posts by the selected year
+            if (filterDate && filterDate !== "all") {
+                filteredPosts = blogPosts.filter(post => post.date.startsWith(filterDate));
+            }
+
+            // Paginate the posts to display based on current page
+            let start = (currentPage - 1) * postsPerPage;
+            let end = start + postsPerPage;
+            let paginatedPosts = filteredPosts.slice(start, end);
+
+            // Loop through the filtered posts and display them
+            paginatedPosts.forEach(post => {
+                const postHTML = `
+        <div class="col">
+            <div class="card h-100 p-3">
+                <img src="${post.image}" class="card-img-top" alt="${post.title}">
+                <div class="card-body d-flex flex-column">
+                    <span class="posted-on">
+                        <time class="entry-date published">${post.date}</time>
+                    </span>
+                    <h5 class="card-title mt-3">${post.title}</h5>
+                    <p class="card-text flex-grow-1">${post.content}</p>
+                </div>
+                <a href="${post.link}" target="_blank" class="plus-icon-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" style="position: absolute; bottom: 10px; right: 10px; viewBox="0 0 30 30">
+                        <path fill="none" stroke="#014a8a" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.022 6.787v13M11 19.5c-.222 0-.677-.242-1.585-.726c-.923-.492-2.198-.982-3.832-1.29c-1.834-.344-2.75-.516-3.167-1.025C2 15.949 2 15.135 2 13.504V7.097c0-1.783 0-2.675.649-3.224c.648-.549 1.41-.406 2.933-.12c3.008.566 4.8 1.749 5.418 2.428c.618-.679 2.41-1.862 5.418-2.427c1.523-.287 2.285-.43 2.933.119c.649.549.649 1.44.649 3.224V10m.864 2.94l.695.692a1.496 1.496 0 0 1 0 2.12l-3.642 3.696a2 2 0 0 1-1.051.552l-2.257.488a.5.5 0 0 1-.598-.593l.48-2.235c.075-.397.268-.762.555-1.047l3.688-3.674a1.51 1.51 0 0 1 2.13 0" color="#014a8a" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+        `;
+                blogList.innerHTML += postHTML;
+            });
+
+            // Update page number display
+            document.getElementById("pageNumber").innerText = `Page ${currentPage}`;
+            document.getElementById("prevPage").disabled = currentPage === 1;
+            document.getElementById("nextPage").disabled = end >= filteredPosts.length;
+        }
+
+        // Pagination Event Listeners
+        document.getElementById("prevPage").addEventListener("click", () => {
+            if (currentPage > 1) {
+                currentPage--;
+                displayPosts(currentFilter);
+            }
+        });
+
+        document.getElementById("nextPage").addEventListener("click", () => {
+            if (currentPage * postsPerPage < blogPosts.length) {
+                currentPage++;
+                displayPosts(currentFilter);
+            }
+        });
+
+        // Timeline Filtering
+        document.querySelectorAll(".filter-timeline").forEach(item => {
+            item.addEventListener("click", function () {
+                let selectedDate = this.getAttribute("data-date");
+                currentPage = 1; // Reset to page 1 on new filter
+                currentFilter = selectedDate;
+                displayPosts(selectedDate);  // Display filtered posts
+            });
+        });
+
+        // Refresh page when clicking "All"
+        document.querySelector("[data-date='2025-02']").addEventListener("click", function () {
+            currentPage = 1;
+            currentFilter = null;  // Remove any active filter
+            displayPosts();  // Display all posts
+        });
+
+        // Initial Load
+        displayPosts();
+
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preloader with Image</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f8f8f8;
+        }
+
+        .loader-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loader img {
+            width: 80px;
+            /* Adjusted size */
+            height: 80px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+            /* Ensure it is above the rotating borders */
+        }
+
+
+        .loader {
+            width: 150px;
+            height: 150px;
+            border-left: 5px solid #154982;
+            border-radius: 50%;
+            animation: right5231 0.9s linear infinite;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .loader::before,
+        .loader::after {
+            content: "";
+            width: 120px;
+            height: 120px;
+            display: block;
+            position: absolute;
+            top: calc(50% - 60px);
+            left: calc(50% - 60px);
+            border-right: 5px solid #6fb541;
+            border-radius: 50%;
+            animation: left036 0.9s linear infinite;
+        }
+
+        @keyframes right5231 {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes left036 {
+            from {
+                transform: rotate(720deg);
+            }
+
+            to {
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="loader-container">
+        <div class="loader"></div>
+        <img src="assets/LOGO C3M only.png" height="100px" width="100px" alt="Logo"> <!-- Replace with your image -->
+    </div>
+</body>
+
+</html>

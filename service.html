@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- bootstrap meta and others  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Basic Meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Century Media360 - Creative Marketing Agency</title>
+
+    <!-- SEO Meta -->
+    <meta name="description"
+        content="Century Media360 is a global creative marketing agency offering strategy, branding, digital solutions, and growth-driven campaigns.">
+    <meta name="keywords"
+        content="Century Media360, marketing agency, creative agency, digital marketing, branding, global strategy, Canada, SEO, design, social media">
+    <meta name="author" content="Century Media360">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About Us | Century Media360">
+    <meta property="og:description"
+        content="Learn about Century Media360 — a full-service marketing agency blending creativity, strategy, and results.">
+    <meta property="og:image" content="https://www.centurymedia360.com/assets/images/og-image.jpg">
+    <meta property="og:url" content="https://www.centurymedia360.com/about">
+    <meta property="og:site_name" content="Century Media360">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Us | Century Media360">
+    <meta name="twitter:description"
+        content="Century Media360 is your strategic partner in marketing success, with a global reach and creative approach.">
+    <meta name="twitter:image" content="https://www.centurymedia360.com/assets/images/twitter-card.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+</head>
+
+<style>
+    body {
+        /* background-color: #F3F3F3; */
+        background: url('assets/service_bodybg.png');
+        width: 100%;
+    }
+
+    .service {
+        opacity: 0;
+        transform: translateY(100px);
+        transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+
+<body>
+
+    <!-- mousepointer effect  -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+
+
+    <!-- nav bar section  -->
+    <nav class="navbar navbar-expand-lg py-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <div class="logo-container">
+                    <img src="assets/logotag.jpg" alt="logo">
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav bg-white px-4 py-2 navbar-custom">
+                    <li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#" style="color: #6cb246; background: none;"
+                            href="">SERVICES</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            MARKETPLACE
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="advertisers.html">Advertisers</a></li>
+                            <li><a class="dropdown-item" href="publishers.html">Publishers </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            MEDIA
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="news.html">News</a></li>
+                            <li><a class="dropdown-item" href="blog.html">Blogs</a></li>
+                            <li><a class="dropdown-item" href="portfolio.html">Portfolio</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="career.html">CAREER</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Row containing 3 cards -->
+    <section class="service">
+        <div class="container service-container py-5">
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="card card2" data-bs-toggle="modal" data-bs-target="#modalAffiliate">
+                        <p class="card-title">Affiliate Marketing</p>
+                        <p class="small-desc">Beneficial Performance Marketing Model. Affiliate marketing is a most
+                            prospective way to make revenue online by generating sale through brands marketing and
+                            advertisement.</p>
+                        <div class="go-corner">
+                            <div class="go-arrow">→</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                    <div class="card card2" data-bs-toggle="modal" data-bs-target="#modalEmail">
+                        <p class="card-title">Email Marketing</p>
+                        <p class="small-desc">In Digital Sector Email Marketing is a boundless beneficial advertising
+                            medium
+                            for enhancing brand awareness & digital engagement leading to brands recognition via B2B &
+                            B2C
+                            sales.</p>
+                        <div class="go-corner">
+                            <div class="go-arrow">→</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="card card2" data-bs-toggle="modal" data-bs-target="#modalDisplay">
+                        <p class="card-title">Display Marketing</p>
+                        <p class="small-desc">Spread your brand awareness through Display Marketing. Display Advertising
+                            is
+                            one of the leading ways to increase your brand awareness and generate fiscal growth in the
+                            Digital sector.</p>
+                        <div class="go-corner">
+                            <div class="go-arrow">→</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-4">
+                    <div class="card card2" data-bs-toggle="modal" data-bs-target="#modalNative">
+                        <p class="card-title">Native Advertising</p>
+                        <p class="small-desc">
+                            Native ads match the visual design of the experience they live within and its natural
+                            content.
+                            these ads must behave consistently with the native user experience and function just like
+                            natural content.
+                        </p>
+                        <div class="go-corner">
+                            <div class="go-arrow">→</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-md-4">
+                    <div class="card card2" data-bs-toggle="modal" data-bs-target="#modalSocialMediaMarketing">
+                        <p class="card-title">Social Media Marketing</p>
+                        <p class="small-desc">
+                            Social Media Marketing is the use of social channels and websites to promote a product or
+                            service. Social Media Marketing is the most popular advertising & publications platform for
+                            both
+                            genres.
+                        </p>
+                        <div class="go-corner">
+                            <div class="go-arrow">→</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-md-4">
+                    <div class="card card2" data-bs-toggle="modal" data-bs-target="#modalContentModulation">
+                        <p class="card-title">Content Modulation</p>
+                        <p class="small-desc">
+                            Content is the fuel that drives online digital business. Although you might see a rush of
+                            content all around the online arena. We create content that makes your business clear to
+                            your
+                            customers.
+                        </p>
+                        <div class="go-corner">
+                            <div class="go-arrow">→</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="col-md-4">
+                    <div class="card card2" data-bs-toggle="modal" data-bs-target="#modalHTMLTemplateDesign">
+                        <p class="card-title">HTML & Template Design</p>
+                        <p class="small-desc">
+                            You share your vision we will make the way of impression. The leading way is to design
+                            impressive templates. Ideal designs are initiated to allure the users and create an
+                            apprehension
+                            for your brands and replic their thoughts.
+                        </p>
+                        <div class="go-corner">
+                            <div class="go-arrow">→</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="col-md-4">
+                    <div class="card card2" data-bs-toggle="modal" data-bs-target="#modalSEO">
+                        <p class="card-title">Search Engine Optimization</p>
+                        <p class="small-desc">
+                            A Methodologically unique strategy & tactics of driving organic traffic to the website. This
+                            is
+                            by obtaining a higher placement in the search results of a search engine including Google,
+                            Yahoo, and others.
+                        </p>
+                        <div class="go-corner">
+                            <div class="go-arrow">→</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="col-md-4">
+                    <div class="card card2" data-bs-toggle="modal" data-bs-target="#modalLeadGeneration">
+                        <p class="card-title">Lead Generation</p>
+                        <p class="small-desc">
+                            In Digital Marketing sector, Lead generate is a way of encouraging users to show their
+                            interest
+                            on the brands/products for improving the Sales online and capturing the newsletter lists.
+                        </p>
+                        <div class="go-corner">
+                            <div class="go-arrow">→</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More Cards... -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+
+    <!-- modal for card 1  -->
+    <div class="modal fade" id="modalAffiliate" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg custom-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Affiliate Marketing</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <img src="https://img.freepik.com/free-photo/businesswoman-is-using-laptop-offic_53876-132186.jpg"
+                        alt="Affiliate Marketing" class="img-fluid mb-3" style="max-height: 300px;">
+                    <h5>Affiliate Marketing Details</h5>
+                    <p>Beneficial Performance Marketing Model.</p>
+                    <p>
+                        Affiliate marketing is a powerful revenue-generation model using brand marketing and
+                        advertisements.
+                        <br>There are innumerable way to advertise your brand through- Email, Social, Display, Native,
+                        SEO, SEM, Content Modulation, Lead Generation. Affiliate marketing helps to graph up the ROI and
+                        the merchants favour this model because it’s a ‘Pay for Performance’ model, the advertiser only
+                        bear the expenses on the result accrued.
+                    </p>
+                    <p>The industry has four core players</p>
+                    <ul>
+                        <li> The merchant (like- ‘Retailer’ or ‘Brand’)</li>
+                        <li> The network(They have offers which the Affiliates need to opt & run. Also look after the
+                            payments.)</li>
+                        <li> The publisher (Also an affiliate or direct Traffic provider)</li>
+                        <li> The Users.</li>
+                    </ul>
+                    <p>Some Benefits</p>
+                    <ul>
+                        <li> A performance base marketing model.</li>
+                        <li> Audience reach are higher.</li>
+                        <li> Cost Effective.</li>
+                        <li> Revenue beneficial for advertiser.</li>
+                    </ul>
+
+                    <p>Century Media360’s affiliate program caters marketing solution through multiple advertising
+                        channels leading to drive revenue as it relies purely on financial motivation.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal for card 2  -->
+    <div class="modal fade" id="modalEmail" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg custom-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Email Marketing</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <img src="https://img.freepik.com/free-photo/hand-pressing-envelope-that-is-sent-world_1232-278.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_hybrid"
+                        alt="Email Marketing" class="img-fluid mb-3" style="max-height: 300px;">
+                    <h5>Email Marketing…A key to Digital Success.</h5>
+                    <p>In Digital Sector Email Marketing is a boundless beneficial advertising medium for enhancing
+                        brand awareness & digital engagement leading to brands recognition via B2B & B2C sales.</p>
+                    <p>
+                        The Market Research suggests, few varieties of email marketing:
+                        <br>Transaction Email - Drop Basket message, password reset email, order status email, email
+                        reorder, e mail receipts etc.
+                        <br>Direct Email - Promotional mails are sent to consumers directly. Example-product or service
+                        offers.
+                        <br>Mobile Email - A large amount of Email traffic generate through Smartphone’s and tablets, so
+                        it is a very useful way to promote your product or service.
+                    </p>
+                    <h6>Advantages of Email marketing.</h6>
+                    <ul>
+                        <li> It is a permission based model.</li>
+                        <li> User’s reach are optimum & target audience can be specified.</li>
+                        <li> It’s time saving, environment friendly and cost effective marketing module.</li>
+                        <li> Easy to get started.</li>
+                        <li> Email Marketing has a valuable metrics including delivery rates, open rates, CTR, and many
+                            more. These metrics are more than just number and percentage</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal for card 3  -->
+    <div class="modal fade" id="modalDisplay" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg custom-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Display Marketing</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <img src="https://img.freepik.com/free-photo/online-marketing_53876-176744.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_hybrid"
+                        alt="Display Marketing" class="img-fluid mb-3" style="max-height: 300px;">
+                    <h5>Display Marketing.</h5>
+                    <p>Spread your brand awareness through Display Marketing.</p>
+                    <p>Display Advertising is one of the leading ways to increase your brand awareness and generate
+                        fiscal growth in the Digital sector.
+                        <br>Few Steps of Display advertising.
+                    <ul>
+                        <li> Set Campaign Goal.</li>
+                        <li> Choose the right network.</li>
+                        <li> Make a plan and reach your target audience.</li>
+                        <li> Create mesmerizing banner ads.</li>
+                        <li> Select the right position for Display ads.</li>
+                        <li> Optimize your campaign and measure its growth.</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal for card 4  -->
+    <div class="modal fade" id="modalNative" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg custom-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Native Advertising</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <img src="https://img.freepik.com/free-photo/digital-marketing-branding-loyalty-graphics_53876-127786.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_hybrid"
+                        alt="Native Marketing" class="img-fluid mb-3" style="max-height: 300px;">
+                    <h5>Native Advertising</h5>
+                    <p>Natural content can maximize the ROI.</p>
+                    <p>Native ads match the visual design of the experience they live within and its natural content.
+                        these ads must behave consistently with the native user experience and function just like
+                        natural content.
+                        Native advertising is a form of paid media where the ad experience follows the natural form &
+                        function of the user experience in which it is placed. The word “native” refers coherence of the
+                        content with the other media that appears on the platform.
+                    </p>
+                    <p>The objective of Native Advertising</p>
+                    <ul>
+                        <li> Positioning a brand image in the consumer’s mind</li>
+                        <li> Driving consumers to take one particular action</li>
+                    </ul>
+                    <p>Type Of Native Advertising</p>
+                    <ul>
+                        <li> Sponsored Content</li>
+                        <li> In Feed Native Ads</li>
+                        <li> Search & Promoted Listings</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal for card 5  -->
+    <div class="modal fade" id="modalSocialMediaMarketing" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg custom-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Social Media Marketing</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <img src="https://img.freepik.com/free-photo/medium-shot-people-addicted-social-media_23-2149834257.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_hybrid"
+                        alt="Social Media Marketing" class="img-fluid mb-3" style="max-height: 300px;">
+                    <h5>Social Media Marketing</h5>
+                    <p>Business Approach through the Social Media Marketing Lenses</p>
+                    <p>Social Media Marketing is the use of social channels and websites to promote a product or
+                        service. Social Media Marketing is the most popular advertising & publications platform for both
+                        genres. Most social media platforms have built-in data analytics & manipulating tools, which
+                        enables companies to do data survey & track the data progress simultaneously time to time to
+                        increase potential reach and engagement of an ad campaigns. Companies uses its social media
+                        channels to list its about & different wing segments. Companies can address its team members
+                        through its social media channels and assigned multiple roles to get connected with potential
+                        consumers, journalists, bloggers & influencers. On a strategic aspect Social Media Marketing
+                        resembles campaign management, strategic governance, productivity analysis & result
+                        visualization to make the optimum output in terms of reach, engagements & establishments.
+                    </p>
+                    <h6>Popular Social Media sites:</h6>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                        <li>Linkedin</li>
+                        <li>Youtube</li>
+                        <li>Twitter</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal for card 6  -->
+    <div class="modal fade" id="modalContentModulation" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg custom-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Content Modulation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <img src="https://img.freepik.com/free-photo/content-concept-laptop-screen_53876-13531.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_authors_boost"
+                        alt="Content Modulation" class="img-fluid mb-3" style="max-height: 300px;">
+                    <h5>Content Modulation</h5>
+                    <p>Content is the fuel that drives online digital business. Although you might see a rush of content
+                        all around the online arena. We create content that makes your business clear to your customers.
+                        The first and foremost goal of content marketing should be to inform and educate your customers
+                        about what service or product you have to offer, what benefits customers will be getting out of
+                        it, and why should they choose you over others.</p>
+                    <p>So, we always put our first focus on understanding the target audiences of your business. Our
+                        prime goal is to understand in which stage your audiences are with respect to your service
+                        acceptance. There are multiple business models based on which different small, medium and big
+                        enterprises operate. The targets of businesses are different and hence a tailored content
+                        marketing strategy is the best approach to align with the specific goals of the businesses.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal for card 7  -->
+    <div class="modal fade" id="modalHTMLTemplateDesign" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg custom-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">HTML & Template Design</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <img src="https://img.freepik.com/free-photo/online-web-design_53876-95309.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_authors_boost"
+                        alt="Web Design" class="img-fluid mb-3" style="max-height: 300px;">
+                    <h5>HTML & Template Design</h5>
+                    <p>You share your vision we will make the way of impression.</p>
+                    <p>The leading way is to design impressive templates.
+                        <br>Ideal designs are initiated to allure the users and create an apprehension for your brands
+                        and replic their thoughts.
+                        Depending on your product requirement we are providing eminent designs for engaging consumers.
+                        <br>We always focus to establish users and brand engagement by designing responsive,adaptable
+                        and customised templates.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal for card 8  -->
+    <div class="modal fade" id="modalSEO" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg custom-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Search Engine Optimization</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <img src="https://img.freepik.com/free-photo/searching-engine-optimizing-seo-browsing-concept_53876-64993.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_authors_boost"
+                        alt="Search Engine Optimization(SEO)" class="img-fluid mb-3" style="max-height: 300px;">
+                    <h5>Search Engine Optimization (SEO)</h5>
+                    <p>A Methodologically unique strategy & tactics of driving organic traffic to the website. This is
+                        by obtaining a higher placement in the search results of a search engine including Google,
+                        Yahoo, and others. Also, it helps to drive the users to your business through a Web portal.
+                        Hence, this advertising model gives the opportunity to make your website primarily in the
+                        initial page of SERP & delivered quality ROI.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal for card 9  -->
+    <div class="modal fade" id="modalLeadGeneration" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg custom-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Lead Generation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-start">
+                    <img src="https://img.freepik.com/free-photo/corporate-management-strategy-solution-branding-concept_53876-167088.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_authors_boost"
+                        alt="Lead Generation" class="img-fluid mb-3" style="max-height: 300px;">
+                    <h5></h5>
+                    <p>In Digital Marketing sector, Lead generate is a way of encouraging users to show their interest
+                        on the brands/products for improving the Sales online and capturing the newsletter lists. Leads
+                        can be created from different sources like Internet, Personal References, Telephone Calls,
+                        Advertisements and Events. Filling up a form for purchasing a product or submitting information
+                        entirely depend on the object.</p>
+                    <h6>We can break lead generate into two main categories:-</h6>
+                    <ol>
+                        <li>Inbound lead-Inbound Lead generate is the process to attracting the attention of users. It
+                            is a most cost effective way to promote your business via Content & SEO, Website, Blog post,
+                            Social media.</li>
+                        <li>Outbound lead-Outbound lead generate process is to reach the users directly via Direct
+                            Email, Display ads, Pay per click ads etc.</li>
+                    </ol>
+                    <p>Lead generate is important because it is the advance process of marketing for the marketers to
+                        reach to the users by focusing on long term business relationship rather than searching users
+                        with only advertising.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add more modals for other cards -->
+
+
+    <!-- Footer  -->
+    <footer class="container bg-white text-start my-5 footer">
+        <div class="row">
+            <!-- Company Info -->
+            <div class="col-md-4">
+                <h5>Century Media360</h5>
+                <p>A Trusted Advertising Agency in UK - Experienced in Digital Branding & Advertisement, renowned for
+                    its Commitment & Gratitude towards Clients Service.</p>
+            </div>
+
+            <!-- Services -->
+            <div class="col-md-2">
+                <h5>Service</h5>
+                <ul class="list-unstyled">
+                    <li><a href="service.html">Affiliate Marketing</a></li>
+                    <li><a href="service.html">Email Marketing</a></li>
+                    <li><a href="service.html">Data Analysis</a></li>
+                    <li><a href="service.html">Web Design</a></li>
+                    <li><a href="service.html">Development</a></li>
+                    <li><a href="service.html">SEO</a></li>
+                </ul>
+            </div>
+
+            <!-- Company Links -->
+            <div class="col-md-2">
+                <h5>Company</h5>
+                <ul class="list-unstyled">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="advertisers.html">Marketplace</a></li>
+                    <li><a href="blog.html">Media</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="col-md-4">
+                <h5>Join a Newsletter</h5>
+                <input type="email" class="newsletter-input" placeholder="Enter Your Email">
+                <button class="subscribe-btn w-100 mt-2">Subscribe</button>
+                <!-- Social Icons -->
+                <!-- Social Icons -->
+                <div class="social-icons mt-3">
+                    <a href="https://www.linkedin.com/company/centurymedia360/posts/?feedView=all" target="_blank"
+                        title="Linkedin"><i class="fab fa-linkedin-in text-white"></i></a>
+                    <a href="https://www.facebook.com/centurymedia360/" target="_blank" title="Facebook"><i
+                            class="fab fa-facebook-f text-white"></i></a>
+                    <a href="https://www.instagram.com/centurymedia360/" target="_blank" title="Instagram"> <i
+                            class="fab fa-instagram text-white"></i></a>
+                    <a href="https://x.com/centurymedia360" target="_blank" title="twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M9.294 6.928L14.357 1h-1.2L8.762 6.147L5.25 1H1.2l5.31 7.784L1.2 15h1.2l4.642-5.436L10.751 15h4.05zM7.651 8.852l-.538-.775L2.832 1.91h1.843l3.454 4.977l.538.775l4.491 6.47h-1.843z"/></svg></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom mt-3 d-flex justify-content-around">
+            <p>&copy; Century Media360. All rights reserved 2017 - 2025.</p>
+            <p>
+                📍 The Pied Horse, Hatfield Road, United Kingdom |
+                ✉️ <a href="mailto:info@centurymedia360.com">info@centurymedia360.com</a> |
+                📞 +44 738 689 9960
+            </p>
+        </div>
+    </footer>
+    <!-- Footer ends  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+
+
+     <!-- JavaScript to trigger the opacity and transform changes after the page loads. -->
+     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll("section");
+
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+
+</body>
+
+</html>
