@@ -1,1029 +1,2012 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <!-- bootstrap meta and others  -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-
-    <!-- Basic Meta -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | Century Media360 - Creative Marketing Agency</title>
-
-    <!-- SEO Meta -->
-    <meta name="description"
-        content="Century Media360 is a global creative marketing agency offering strategy, branding, digital solutions, and growth-driven campaigns.">
-    <meta name="keywords"
-        content="Century Media360, marketing agency, creative agency, digital marketing, branding, global strategy, Canada, SEO, design, social media">
-    <meta name="author" content="Century Media360">
-
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="About Us | Century Media360">
-    <meta property="og:description"
-        content="Learn about Century Media360 — a full-service marketing agency blending creativity, strategy, and results.">
-    <meta property="og:image" content="https://www.centurymedia360.com/assets/images/og-image.jpg">
-    <meta property="og:url" content="https://www.centurymedia360.com/about">
-    <meta property="og:site_name" content="Century Media360">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="About Us | Century Media360">
-    <meta name="twitter:description"
-        content="Century Media360 is your strategic partner in marketing success, with a global reach and creative approach.">
-    <meta name="twitter:image" content="https://www.centurymedia360.com/assets/images/twitter-card.jpg">
-
-    <!-- Favicon -->
-    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
-
-    <style>
-        .circle {
-            height: 24px;
-            width: 24px;
-            border-radius: 24px;
-            background-color: black;
-            position: fixed;
-            top: 0;
-            left: 0;
-            pointer-events: none;
-            z-index: 99999999;
-            /* so that it stays on top of all other elements */
-        }
-
-        #backToTop {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: none;
-            background-color: #014a8a;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
-            cursor: pointer;
-            font-size: 14px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        #backToTop:hover {
-            background-color: #6cb246;
-        }
-
-        body {
-            /* background-color: #F3F3F3; */
-            background: url('assets/bodybg.png');
-            overflow-x: hidden;
-        }
-
-
-        /* navbar section starts  */
-        .navbar-custom {
-            background: white;
-            border-radius: 50px;
-            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
-            padding: 10px 20px;
-        }
-
-        .nav-link {
-            font-weight: 700;
-            color: #014a8a;
-            transition: color 0.3s ease-in-out;
-        }
-
-        .nav-link:hover,
-        .nav-link.active {
-            color: #6cb246;
-        }
-
-        .navbar-nav {
-            width: 900px;
-            justify-content: space-around;
-        }
-
-        .logo-container {
-            width: 60px;
-            height: 60px;
-            background: white;
-            border-radius: 50%;
-            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .logo-container img {
-            width: 50px;
-            height: auto;
-            border-radius: 50%;
-        }
-
-        .dropdown-menu.show {
-            background: white;
-            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
-            border: none;
-            margin-top: 20px;
-        }
-
-        /* navbar section ends  *
-
-
-        /* footer section start  */
-        .footer {
-            margin-top: 80px;
-            background: #fff;
-            padding: 40px 30px;
-            border-radius: 30px;
-            box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e9e9e9;
-        }
-
-        .footer h5 {
-            font-weight: bold;
-            color: #014a8a;
-        }
-
-        .footer a {
-            color: #6c757d;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            color: #014a8a;
-        }
-
-        .footer .social-icons a {
-            display: inline-block;
-            width: 35px;
-            height: 35px;
-            line-height: 35px;
-            text-align: center;
-            border-radius: 50%;
-            background: #6cb246;
-            color: #fff;
-            margin: 0 5px;
-            font-size: 16px;
-        }
-
-        .footer .social-icons a:hover {
-            background: #407d28;
-        }
-
-        .newsletter-input {
-            border: 1px solid #014a8a;
-            border-radius: 5px;
-            padding: 8px 10px;
-            width: 100%;
-        }
-
-        .subscribe-btn {
-            background: #014a8a;
-            color: #fff;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            margin-top: 5px;
-        }
-
-        .subscribe-btn:hover {
-            background: #082b47;
-        }
-
-        .footer-bottom {
-            border-top: 1px solid #014a8a;
-            padding-top: 10px;
-            text-align: center;
-            font-size: 14px;
-            color: #6c757d;
-            margin-bottom: -20px;
-        }
-
-        /* footer section end  */
-
-        .carousel-img {
-            width: 1320px;
-            height: 500px;
-            object-fit: cover;
-            border-radius: 1rem;
-        }
-
-        .carousel-container {
-            max-width: 1320px;
-            margin: auto;
-        }
-
-        .service {
-            opacity: 0;
-            transform: translateY(100px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
-
-        .active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        #scrollContainer>.d-flex {
-            scroll-snap-type: x mandatory;
-            scroll-behavior: smooth;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .service-card {
-            background: linear-gradient(145deg, #001f4a, #143D7A);
-            border-radius: 20px;
-            padding: 20px;
-            width: 330px;
-            flex-shrink: 0;
-            height: 420px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2), 0 4px 10px rgba(0, 0, 0, 0.3);
-            color: white;
-            scroll-snap-align: center;
-        }
-
-        .blur-circle {
-            position: absolute;
-            width: 100px;
-            height: 100px;
-            background: #001f4a;
-            border: 4px solid white;
-            outline: 4px solid white;
-            filter: blur(10px);
-            border-radius: 50%;
-            top: 15%;
-            right: 15%;
-        }
-
-        .service-card img {
-            border-radius: 10px;
-            width: 100%;
-            height: 150px;
-            margin-top: 5px;
-            object-fit: cover;
-        }
-
-        /* Custom animation states */
-        #about {
-            opacity: 0;
-            transform: translateX(-100px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-            margin-top: 80px;
-        }
-
-        #about.active {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-        .btn-custom {
-            background: linear-gradient(to right, #001f4a, #62b3f9);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 10px;
-            font-weight: bold;
-            font-size: 20px;
-            text-decoration: none;
-            display: inline-block;
-            transition: 0.3s;
-        }
-
-        .btn-custom:hover {
-            background: linear-gradient(to right, #62b3f9, #001f4a);
-            color: white;
-        }
-
-        .smallcard {
-            margin: 100px 0;
-            opacity: 0;
-            transform: translateY(100px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
-
-        .smallcard.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .smcard {
-            background: linear-gradient(360deg, #001f4a, #62b3f9);
-            color: white;
-            padding: 30px 20px;
-            /* Reduced padding */
-            border-radius: 10px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            transition: transform 0.4s ease;
-            cursor: pointer;
-            height: auto;
-            /* Let content determine height */
-        }
-
-        .smcard:hover {
-            transform: scale(1.1);
-        }
-
-        .row:hover .smcard:not(:hover) {
-            filter: blur(5px);
-            transform: scale(0.9);
-        }
-
-        .map-content {
-            opacity: 0;
-            transform: translateX(-100px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-            /* Ensure smooth transition */
-        }
-
-        .map-content.active {
-            opacity: 1;
-            transform: translateX(0);
-        }
-
-
-        .img-box {
-            opacity: 0;
-            transform: translateY(220px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
-
-        .active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Custom styles to maintain the design of social media section */
-        .phone {
-            position: absolute;
-            width: 100%;
-            height: auto;
-            right: -5%;
-            bottom: -500px;
-            z-index: 5;
-        }
-
-        .down-vector {
-            margin-top: -220px;
-            z-index: 1;
-        }
-
-        @media (max-width: 1280px) {
-            .phone {
-                width: 100%;
-                right: 0;
-                top: -280px;
-            }
-
-            .down-vector {
-                display: none !important;
-            }
-        }
-
-        @media (max-width: 1020px) {
-            .phone {
-                display: none !important;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .heading {
-                padding-right: 40px;
-            }
-        }
-
-        #social-media {
-            margin-top: 150px;
-            padding: 0;
-            opacity: 0;
-            transform: translateX(100px);
-            transition: opacity 1s ease-out, transform 1s ease-out;
-        }
-
-        #social-media.active {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    </style>
-</head>
-
-<body>
-
-    <!-- mouse  pointer-->
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-    <div class="circle"></div>
-
-    <!-- backToTop btn  -->
-
-    <button id="backToTop">Back to Top</button>
-
-
-    <!-- nav bar section  -->
-    <nav class="navbar navbar-expand-lg py-3">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <div class="logo-container">
-                    <img src="assets/logotag.jpg" alt="logo">
-                </div>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav bg-white px-4 py-2 navbar-custom">
-                    <li class="nav-item"><a class="nav-link active" href="#"
-                            style="color: #6cb246; background: none;">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
-
-                    <li class="nav-item"><a class="nav-link" href="service.html">SERVICES</a></li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            MARKETPLACE
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="advertisers.html">Advertisers</a></li>
-                            <li><a class="dropdown-item" href="publishers.html">Publishers </a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            MEDIA
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="news.html">News</a></li>
-                            <li><a class="dropdown-item" href="blog.html">Blogs</a></li>
-                            <li><a class="dropdown-item" href="portfolio.html">Portfolio</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="career.html">CAREER</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- carousel section  -->
-    <div id="teamCarousel" class="carousel slide carousel-container mt-5" data-bs-ride="carousel"
-        data-bs-interval="3000">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://img.freepik.com/free-photo/medium-shot-business-team-working-together_23-2149271705.jpg?uid=R189197379&ga=GA1.1.2073105748.1744610447&semt=ais_hybrid&w=740"
-                    class="d-block carousel-img" alt="Team Meeting 1">
-            </div>
-            <div class="carousel-item">
-                <img src="https://img.freepik.com/free-photo/trans-person-working-office-with-colleagues_23-2149286965.jpg?uid=R189197379&ga=GA1.1.2073105748.1744610447&semt=ais_hybrid&w=740"
-                    class="d-block carousel-img" alt="Team Meeting 2">
-            </div>
-            <div class="carousel-item">
-                <img src="https://img.freepik.com/free-photo/businesspeople-working-as-team-with-laptop_1098-1748.jpg?t=st=1745822485~exp=1745826085~hmac=00e6aba00ae709434474aa21be0fceff11d110d14f2ee564ba2f5717fb95dcb3&w=996"
-                    class="d-block carousel-img" alt="Team Meeting 3">
-            </div>
-        </div>
-    </div>
-
-    <!-- service-card section -->
-    <section class="py-5 service">
-        <div class="container bg-white py-3 px-md-6 rounded shadow position-relative" style="padding: 5rem;">
-            <div class="mb-4 p-2 bg-white rounded shadow-sm">
-                <h1 class="mb-0" style="color: #014a8a !important;">OUR SERVICES</h1>
-            </div>
-
-            <!-- Arrows inside the container with margin spacing -->
-            <button id="scrollLeft" class="btn position-absolute top-50 start-0 translate-middle-y ms-2 z-1 p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
-                    <path fill="#6cb246"
-                        d="m19.503 20.835l-16.51-7.363c-1.324-.59-1.324-2.354 0-2.944l16.51-7.363c1.495-.667 3.047.814 2.306 2.202l-3.152 5.904c-.245.459-.245 1 0 1.458l3.152 5.904c.74 1.388-.81 2.87-2.306 2.202" />
-                </svg>
-            </button>
-
-            <button id="scrollRight" class="btn position-absolute top-50 end-0 translate-middle-y me-2 z-1 p-2">
-                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
-                    <path fill="#6cb246"
-                        d="m4.497 20.835l16.51-7.363c1.324-.59 1.324-2.354 0-2.944L4.497 3.164c-1.495-.667-3.047.814-2.306 2.202l3.152 5.904c-.245.459-.245 1 0 1.458l-3.152 5.904c-.74 1.388.81 2.87 2.306 2.202" />
-                </svg>
-            </button>
-
-
-            <div class="overflow-hidden" id="scrollContainer">
-                <div class="d-flex gap-5 flex-nowrap pb-4 px-4 overflow-hidden">
-                    <!-- Repeatable Service Card -->
-                    <div class="position-relative service-card mx-2 flex-shrink-0"
-                        style="min-width: 200px; max-width: 90%;">
-                        <div class="blur-circle"></div>
-                        <div class="d-flex flex-column justify-content-center h-100 w-100 p-3 bg-white bg-opacity-10 rounded text-white shadow"
-                            style="backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
-                            <h3 class="fw-bold text-start">Affiliate Marketing</h3>
-                            <p class="text-start">Beneficial Performance Marketing Model. Affiliate marketing is a most prospective way to
-                                make revenue online.</p>
-                            <img src="https://img.freepik.com/free-photo/woman-working-with-computer-affiliate-marketing_53876-138648.jpg"
-                                alt="Affiliate Marketing">
-                        </div>
-                    </div>
-                    <div class="position-relative service-card mx-2 flex-shrink-0"
-                        style="min-width: 200px; max-width: 90%;">
-                        <div class="blur-circle"></div>
-                        <div class="d-flex flex-column justify-content-center h-100 w-100 p-3 bg-white bg-opacity-10 rounded text-white shadow"
-                            style="backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
-                            <h3 class="fw-bold text-start">Email Marketing</h3>
-                            <p class="text-start">Digital Sector Email Marketing is a boundless advertising medium for enhancing brand
-                                awareness
-                                via B2B & B2C sales.</p>
-                            <img src="https://img.freepik.com/free-photo/letter-envelop-message-notification-concept_53876-13786.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_hybrid"
-                                alt="Email Marketing">
-                        </div>
-                    </div>
-                    <div class="position-relative service-card mx-2 flex-shrink-0"
-                        style="min-width: 200px; max-width: 90%;">
-                        <div class="blur-circle"></div>
-                        <div class="d-flex flex-column justify-content-center h-100 w-100 p-3 bg-white bg-opacity-10 rounded text-white shadow"
-                            style="backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
-                            <h3 class="fw-bold text-start">Display Marketing</h3>
-                            <p class="text-start">Increase brand awareness and drive growth with Display Advertising, a leading digital
-                                marketing strategy.</p>
-                            <img src="https://img.freepik.com/free-photo/advertise-communication-digital-marketing-business-concept_53876-133825.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_hybrid"
-                                alt="Display Marketing">
-                        </div>
-                    </div>
-                    <div class="position-relative service-card mx-2 flex-shrink-0"
-                        style="min-width: 200px; max-width: 90%;">
-                        <div class="blur-circle"></div>
-                        <div class="d-flex flex-column justify-content-center h-100 w-100 p-3 bg-white bg-opacity-10 rounded text-white shadow"
-                            style="backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
-                            <h3 class="fw-bold text-start">Native Advertising</h3>
-                            <p class="text-start">Native ads blend seamlessly with content, ensuring a consistent user experience and
-                                natural functionality across platforms.</p>
-                            <img src="https://img.freepik.com/free-photo/diverse-people-thinking-planning-marketing-brand-concept_53876-64952.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_hybrid"
-                                alt="Native Advertising">
-                        </div>
-                    </div>
-                    <div class="position-relative service-card mx-2 flex-shrink-0"
-                        style="min-width: 200px; max-width: 90%;">
-                        <div class="blur-circle"></div>
-                        <div class="d-flex flex-column justify-content-center h-100 w-100 p-3 bg-white bg-opacity-10 rounded text-white shadow"
-                            style="backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
-                            <h3 class="fw-bold text-start">Social Media Marketing</h3>
-                            <p class="text-start">Social Media Marketing uses social platforms to promote products, making it a leading
-                                advertising tool.</p>
-                            <img src="https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_hybrid"
-                                alt="Social Media Marketing">
-                        </div>
-                    </div>
-                    <div class="position-relative service-card mx-2 flex-shrink-0"
-                        style="min-width: 200px; max-width: 90%;">
-                        <div class="blur-circle"></div>
-                        <div class="d-flex flex-column justify-content-center h-100 w-100 p-3 bg-white bg-opacity-10 rounded text-white shadow"
-                            style="backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
-                            <h3 class="fw-bold text-start">Content Modulation</h3>
-                            <p class="text-start">Content drives digital business; we create clear, impactful content to engage and inform
-                                your
-                                customers.</p>
-                            <img src="https://img.freepik.com/free-photo/creativity-creative-ideas-imagination-inspiration-design-concept_53876-123736.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_hybrid"
-                                alt="Content Modulation">
-                        </div>
-                    </div>
-                    <div class="position-relative service-card mx-2 flex-shrink-0"
-                        style="min-width: 200px; max-width: 90%;">
-                        <div class="blur-circle"></div>
-                        <div class="d-flex flex-column justify-content-center h-100 w-100 p-3 bg-white bg-opacity-10 rounded text-white shadow"
-                            style="backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
-                            <h3 class="fw-bold text-start">HTML & Template Design</h3>
-                            <p class="text-start">Share your vision — we create stunning, user-focused designs that elevate your brand.</p>
-                            <img src="https://img.freepik.com/free-photo/still-life-graphic-design-office_23-2151345419.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_hybrid"
-                                alt="HTML & Template Design">
-                        </div>
-                    </div>
-                    <div class="position-relative service-card mx-2 flex-shrink-0"
-                        style="min-width: 200px; max-width: 90%;">
-                        <div class="blur-circle"></div>
-                        <div class="d-flex flex-column justify-content-center h-100 w-100 p-3 bg-white bg-opacity-10 rounded text-white shadow"
-                            style="backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
-                            <h3 class="fw-bold text-start">SEO</h3>
-                            <p class="text-start">A unique, effective strategy to boost organic traffic through higher search rankings on Google and other search engines.</p>
-                            <img src="https://img.freepik.com/free-photo/searching-engine-optimizing-seo-browsing-concept_53876-64993.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_hybrid"
-                                alt="SEO">
-                        </div>
-                    </div>
-                    <div class="position-relative service-card mx-2 flex-shrink-0"
-                        style="min-width: 200px; max-width: 90%;">
-                        <div class="blur-circle"></div>
-                        <div class="d-flex flex-column justify-content-center h-100 w-100 p-3 bg-white bg-opacity-10 rounded text-white shadow"
-                            style="backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
-                            <h3 class="fw-bold text-start">Lead Generation</h3>
-                            <p class="text-start">Lead generation drives interest, boosts sales, and grows online subscriptions.</p>
-                            <img src="https://img.freepik.com/free-photo/marketing-ideas-share-research-planning-concept_53876-127431.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179"
-                                alt="Lead Generation">
-                        </div>
-                    </div>
-                    <!-- Add more service cards similarly -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="mt-5" id="about">
-        <div class="container">
-            <div class="row g-4 p-4 bg-white shadow rounded-4 align-items-stretch">
-                <div class="col-md-5 d-flex">
-                    <img src="https://img.freepik.com/free-photo/modern-equipped-computer-lab_23-2149241213.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_hybrid"
-                        class="img-fluid w-100 h-100 object-fit-cover rounded-4" alt="About Image">
-                </div>
-                <div class="col-md-7">
-                    <h2 class="fs-2 fw-bold bg-white p-3 rounded-3 shadow d-inline-block" style="color: #014a8a;">
-                        About Century Media<span style="color: #6cb246">360</span>
-                    </h2>
-                    <h4 class="fs-4 fw-semibold bg-white p-2 rounded-3 shadow d-inline-block mt-3"
-                        style="color: #014a8a;">
-                        Your Global Digital Partner
-                    </h4>
-                    <p class="mt-4 fs-5">
-                        Empower your business and build enduring relationships with clients through our comprehensive
-                        and personalized digital marketing solutions that include SEO, social media marketing, content
-                        marketing, email marketing, and much more to engage new clients and communicate with existing
-                        ones.
-                    </p>
-                    <a href="about.html" class="btn-custom mt-3">
-                        Read More
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Small Cards Section -->
-    <section class="smallcard py-5">
-        <div class="container text-center">
-            <div class="row g-5 justify-content-center">
-                <div class="col-12 col-md-4">
-                    <div class="smcard h-100">
-                        <h3 class="fw-bold mb-2">Trusted Industry Expert</h3>
-                        <p class="mb-0">
-                            We as 'Professionals' believe in service & remit, as our decorated team focuses on the
-                            client's priority ethically.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="smcard h-100">
-                        <h3 class="fw-bold mb-2">Beyond Digital Planning</h3>
-                        <p class="mb-0">
-                            Our strategic work resembles out-of-the-box thoughts to look beyond your goals innovatively
-                            and effectively.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-4">
-                    <div class="smcard h-100">
-                        <h3 class="fw-bold mb-2">Leading with Impact</h3>
-                        <p class="mb-0">
-                            We prioritize client's needs & analyze through creative and contents to embrace a
-                            competitive delicacy.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Map Section -->
-    <section class="py-5 mt-5 bg-white">
-        <div class="container">
-            <div class="row align-items-center gy-4">
-                <!-- Left Text Content -->
-                <div class="col-md-6 map-content">
-                    <div class="d-flex align-items-center mb-2">
-                        <div class="rounded-pill" style="width: 60px; height: 5px; background-color: #014a8a;"></div>
-                        <h2 class="mb-0 ms-3 fw-bold" style="color: #014a8a;">How we do it?</h2>
-                    </div>
-                    <h4 class="fs-4 fw-bold bg-white p-2 rounded-3 shadow d-inline-block my-3" style="color: #014a8a;">
-                        Strategic Digital Solutions Worldwide
-                    </h4>
-
-                    <div class="row mt-3">
-                        <!-- Box 1 -->
-                        <div class="col-md-4 mb-4">
-                            <img src="assets/home_map_icon1.png" width="50" alt="Icon">
-                            <h5 class="mt-3 fw-bold" style="color: #014a8a;">Data-Driven Digital Marketing</h5>
-                            <p class="text-secondary">Leverage analytics to create data-driven marketing strategies that
-                                enhance engagement, boost conversions, and maximize ROI.</p>
-                        </div>
-                        <!-- Box 2 -->
-                        <div class="col-md-4 mb-4">
-                            <img src="assets/home_map_icon2.png" width="50" alt="Icon">
-                            <h5 class="mt-3 fw-bold" style="color: #014a8a;">Engaging & Impactful Content</h5>
-                            <p class="text-secondary">Craft impactful content that engages audiences, boosts loyalty,
-                                and drives conversions across social media and email marketing.</p>
-                        </div>
-                        <!-- Box 3 -->
-                        <div class="col-md-4 mb-4">
-                            <img src="assets/home_map_icon3.png" width="50" alt="Icon">
-                            <h5 class="mt-3 fw-bold" style="color: #014a8a;">Seamless Client Communication</h5>
-                            <p class="text-secondary">Foster lasting client relationships with targeted digital
-                                interactions, ensuring trust, consistency, and long-term growth.</p>
-                        </div>
-                    </div>
-                    <a href="portfolio.html" class="btn btn-custom mt-3">Our Works</a>
-                </div>
-
-                <!-- Right Image -->
-                <div class="col-md-6 text-center img-box">
-                    <img src="assets/map.png" class="img-fluid rounded" alt="Idea Mapping">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- social media section  -->
-    <section class="container-fluid text-white position-relative" id="social-media">
-        <div class="text-start">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-lg-5">
-                    <!-- Heading -->
-                    <div class="bg-white px-4 py-3 rounded-4 position-absolute w-70 fw-bold text-start"
-                        style="top: -3rem; color: #014a8a;">
-                        <h2 class="fw-bold mb-0">Amplify Your Brand with Powerful <br> Social Media Strategies</h2>
-                    </div>
-
-                    <!-- Blue card -->
-                    <div class="text-white rounded-4 p-4 pt-5 mt-4" style="background-color: #014a8a; font-size: 22px;">
-                        <p>Join us on social media and unlock the power of strategic digital marketing. From SEO and
-                            content
-                            marketing to social media and email campaigns, we help businesses grow, engage new clients,
-                            and
-                            build lasting relationships. Stay updated with the latest trends, insights, and strategies
-                            to
-                            elevate your brand’s online presence.<br><a href="index.html"
-                                style="text-decoration: none; color: white;"><b>#centurymedia360</b></a></p>
-                    </div>
-                </div>
-
-                <div class="col-lg-5 position-relative">
-                    <!-- Phone Image -->
-                    <img src="assets/social ph.png" class="phone" alt="social media">
-                </div>
-            </div>
-
-            <div class="row d-none d-md-block down-vector">
-                <img src="assets/Vector 1.png" alt="down vector" class="img-fluid" style="width: 100%; padding: 0;">
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer  -->
-    <footer class="container bg-white text-start my-5 footer">
-        <div class="row">
-            <!-- Company Info -->
-            <div class="col-md-4">
-                <h5>Century Media360</h5>
-                <p>A Trusted Advertising Agency in UK - Experienced in Digital Branding & Advertisement, renowned for
-                    its Commitment & Gratitude towards Clients Service.</p>
-            </div>
-
-            <!-- Services -->
-            <div class="col-md-2">
-                <h5>Service</h5>
-                <ul class="list-unstyled">
-                    <li><a href="service.html">Affiliate Marketing</a></li>
-                    <li><a href="service.html">Email Marketing</a></li>
-                    <li><a href="service.html">Data Analysis</a></li>
-                    <li><a href="service.html">Web Design</a></li>
-                    <li><a href="service.html">Development</a></li>
-                    <li><a href="service.html">SEO</a></li>
-                </ul>
-            </div>
-
-            <!-- Company Links -->
-            <div class="col-md-2">
-                <h5>Company</h5>
-                <ul class="list-unstyled">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="service.html">Services</a></li>
-                    <li><a href="advertisers.html">Marketplace</a></li>
-                    <li><a href="blog.html">Media</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- Newsletter -->
-            <div class="col-md-4">
-                <h5>Join a Newsletter</h5>
-                <input type="email" class="newsletter-input" placeholder="Enter Your Email">
-                <button class="subscribe-btn w-100 mt-2">Subscribe</button>
-                <!-- Social Icons -->
-                <div class="social-icons mt-3">
-                    <a href="https://www.linkedin.com/company/centurymedia360/posts/?feedView=all" target="_blank"
-                        title="Linkedin"><i class="fab fa-linkedin-in text-white"></i></a>
-                    <a href="https://www.facebook.com/centurymedia360/" target="_blank" title="Facebook"><i
-                            class="fab fa-facebook-f text-white"></i></a>
-                    <a href="https://www.instagram.com/centurymedia360/" target="_blank" title="Instagram"> <i
-                            class="fab fa-instagram text-white"></i></a>
-                    <a href="https://x.com/centurymedia360" target="_blank" title="twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M9.294 6.928L14.357 1h-1.2L8.762 6.147L5.25 1H1.2l5.31 7.784L1.2 15h1.2l4.642-5.436L10.751 15h4.05zM7.651 8.852l-.538-.775L2.832 1.91h1.843l3.454 4.977l.538.775l4.491 6.47h-1.843z"/></svg></a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer Bottom -->
-        <div class="footer-bottom mt-3 d-flex justify-content-around">
-            <p>&copy; Century Media360. All rights reserved 2017 - 2025.</p>
-            <p>
-                📍 The Pied Horse, Hatfield Road, United Kingdom |
-                ✉️ <a href="mailto:info@centurymedia360.com">info@centurymedia360.com</a> |
-                📞 +44 738 689 9960
-            </p>
-        </div>
-    </footer>
-    <!-- Footer ends  -->
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- JavaScript to trigger the opacity and transform changes after the page loads. -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const sections = document.querySelectorAll("section");
-
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("active");
-                    }
-                });
-            }, { threshold: 0.2 });
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-        });
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const mapContent = document.querySelector('.map-content');
-
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("active");
-                    }
-                });
-            }, { threshold: 0.2 });
-
-            observer.observe(mapContent); // Observe only the map-content section
-        });
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const sections = document.querySelectorAll("section");
-
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("active");
-                    }
-                });
-            }, { threshold: 0.2 });
-
-            sections.forEach(section => {
-                observer.observe(section);
-            });
-
-            // Add observer for .img-box specifically
-            const imgBox = document.querySelector('.img-box');
-            observer.observe(imgBox);  // Observe the img-box to trigger the active class
-        });
-
-
-    </script>
-
-    <!-- script for right and left  -->
-    <script>
-        const scrollContainer = document.querySelector('#scrollContainer .d-flex');
-        const scrollLeftBtn = document.getElementById('scrollLeft');
-        const scrollRightBtn = document.getElementById('scrollRight');
-        const cards = document.querySelectorAll('.service-card');
-
-        const scrollToCard = (index) => {
-            const card = cards[index];
-            const cardRect = card.getBoundingClientRect();
-            const containerRect = scrollContainer.getBoundingClientRect();
-            const offset = card.offsetLeft - (scrollContainer.offsetWidth / 2) + (card.offsetWidth / 2);
-            scrollContainer.scrollTo({ left: offset, behavior: 'smooth' });
-        };
-
-        let currentIndex = 0;
-        const maxIndex = cards.length - 1;
-
-        scrollRightBtn.addEventListener('click', () => {
-            currentIndex = Math.min(currentIndex + 1, maxIndex);
-            scrollToCard(currentIndex);
-        });
-
-        scrollLeftBtn.addEventListener('click', () => {
-            currentIndex = Math.max(currentIndex - 1, 0);
-            scrollToCard(currentIndex);
-        });
-
-        window.addEventListener('load', () => {
-            scrollToCard(currentIndex);
-        });
-    </script>
-
-    <!-- script for mouse pointer  -->
-    <script>
-        const coords = { x: 0, y: 0 };
-        const circles = document.querySelectorAll(".circle");
-
-        const colors = [
-            "#014a8a", "#04508f", "#0a5a97", "#1365a0", "#1a70a8", // Deep to Medium Blue
-            "#2682c0", "#2e8dcb", "#3699d6", "#3ea4e1", "#47b0ec", // Light Blue to Teal Transition
-            "#4fadf0", "#5ab352", "#64b957", "#6bb04b", "#72b651", // Teal to Green Transition
-            "#6cb246", "#7fc157", "#86c85a", "#8ecd61", "#95d367", // Light Green
-            "#9cd96e", "#a4df74" // Bright Green End
-        ];
-
-        circles.forEach(function (circle, index) {
-            circle.x = 0;
-            circle.y = 0;
-            circle.style.backgroundColor = colors[index % colors.length];
-        });
-
-        window.addEventListener("mousemove", function (e) {
-            coords.x = e.clientX;
-            coords.y = e.clientY;
-
-        });
-
-        function animateCircles() {
-
-            let x = coords.x;
-            let y = coords.y;
-
-            circles.forEach(function (circle, index) {
-                circle.style.left = x - 12 + "px";
-                circle.style.top = y - 12 + "px";
-
-                circle.style.scale = (circles.length - index) / circles.length;
-
-                circle.x = x;
-                circle.y = y;
-
-                const nextCircle = circles[index + 1] || circles[0];
-                x += (nextCircle.x - x) * 0.3;
-                y += (nextCircle.y - y) * 0.3;
-            });
-
-            requestAnimationFrame(animateCircles);
-        }
-
-        animateCircles();
-    </script>
-
-    <script>
-        const backToTopButton = document.getElementById('backToTop');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopButton.style.display = 'block';
-            } else {
-                backToTopButton.style.display = 'none';
-            }
-        });
-
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    </script>
-
-</body>
-
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <!-- bootstrap meta and others  -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+
+
+    <!-- Basic Meta -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home | B2B - Creative Marketing Agency</title>
+
+
+
+    <!-- Favicon -->
+
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+
+
+
+    <style>
+
+        .circle {
+
+            height: 24px;
+
+            width: 24px;
+
+            border-radius: 24px;
+
+            background-color: black;
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            pointer-events: none;
+
+            z-index: 99999999;
+
+            /* so that it stays on top of all other elements */
+
+        }
+
+
+
+        #backToTop {
+
+            position: fixed;
+
+            bottom: 20px;
+
+            right: 20px;
+
+            display: none;
+
+            background-color: #014a8a;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 5px;
+
+            padding: 10px 15px;
+
+            cursor: pointer;
+
+            font-size: 14px;
+
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        }
+
+
+
+        #backToTop:hover {
+
+            background-color: #6cb246;
+
+        }
+
+
+
+        body {
+
+            /* background-color: #F3F3F3; */
+
+            background: url('assets/bodybg.png');
+
+            overflow-x: hidden;
+
+        }
+
+
+
+
+
+        /* navbar section starts  */
+
+        .navbar-custom {
+
+            background: white;
+
+            border-radius: 50px;
+
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+
+            padding: 10px 20px;
+
+        }
+
+
+
+        .nav-link {
+
+            font-weight: 700;
+
+            color: #014a8a;
+
+            transition: color 0.3s ease-in-out;
+
+        }
+
+
+
+        .nav-link:hover,
+
+        .nav-link.active {
+
+            color: #6cb246;
+
+        }
+
+
+
+        .navbar-nav {
+
+            width: 900px;
+
+            justify-content: space-around;
+
+        }
+
+
+
+        .logo-container {
+
+            width: 60px;
+
+            height: 60px;
+
+            background: white;
+
+            border-radius: 50%;
+
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+        }
+
+
+
+        .logo-container img {
+
+            width: 50px;
+
+            height: auto;
+
+            border-radius: 50%;
+
+        }
+
+
+
+        .dropdown-menu.show {
+
+            background: white;
+
+            box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.1);
+
+            border: none;
+
+            margin-top: 20px;
+
+        }
+
+
+
+        /* navbar section ends  *
+
+
+
+
+
+        /* footer section start  */
+
+        .footer {
+
+            margin-top: 80px;
+
+            background: #fff;
+
+            padding: 40px 30px;
+
+            border-radius: 30px;
+
+            box-shadow: 4px 6px 12px rgba(0, 0, 0, 0.1);
+
+            border: 1px solid #e9e9e9;
+
+        }
+
+
+
+        .footer h5 {
+
+            font-weight: bold;
+
+            color: #014a8a;
+
+        }
+
+
+
+        .footer a {
+
+            color: #6c757d;
+
+            text-decoration: none;
+
+        }
+
+
+
+        .footer a:hover {
+
+            color: #014a8a;
+
+        }
+
+
+
+        .footer .social-icons a {
+
+            display: inline-block;
+
+            width: 35px;
+
+            height: 35px;
+
+            line-height: 35px;
+
+            text-align: center;
+
+            border-radius: 50%;
+
+            background: #6cb246;
+
+            color: #fff;
+
+            margin: 0 5px;
+
+            font-size: 16px;
+
+        }
+
+
+
+        .footer .social-icons a:hover {
+
+            background: #407d28;
+
+        }
+
+
+
+        .newsletter-input {
+
+            border: 1px solid #014a8a;
+
+            border-radius: 5px;
+
+            padding: 8px 10px;
+
+            width: 100%;
+
+        }
+
+
+
+        .subscribe-btn {
+
+            background: #014a8a;
+
+            color: #fff;
+
+            border: none;
+
+            padding: 8px 15px;
+
+            border-radius: 5px;
+
+            margin-top: 5px;
+
+        }
+
+
+
+        .subscribe-btn:hover {
+
+            background: #082b47;
+
+        }
+
+
+
+        .footer-bottom {
+
+            border-top: 1px solid #014a8a;
+
+            padding-top: 10px;
+
+            text-align: center;
+
+            font-size: 14px;
+
+            color: #6c757d;
+
+            margin-bottom: -20px;
+
+        }
+
+
+
+        /* footer section end  */
+
+
+
+        .carousel-img {
+
+            width: 1320px;
+
+            height: 500px;
+
+            object-fit: cover;
+
+            border-radius: 1rem;
+
+        }
+
+
+
+        .carousel-container {
+
+            max-width: 1320px;
+
+            margin: auto;
+
+        }
+
+
+
+        .service {
+
+            opacity: 0;
+
+            transform: translateY(100px);
+
+            transition: opacity 1s ease-out, transform 1s ease-out;
+
+        }
+
+
+
+        .active {
+
+            opacity: 1;
+
+            transform: translateY(0);
+
+        }
+
+
+
+        #scrollContainer>.d-flex {
+
+            scroll-snap-type: x mandatory;
+
+            scroll-behavior: smooth;
+
+            overflow-x: auto;
+
+            -webkit-overflow-scrolling: touch;
+
+        }
+
+
+
+        .service-card {
+
+            background: linear-gradient(145deg, #001f4a, #143D7A);
+
+            border-radius: 20px;
+
+            padding: 20px;
+
+            width: 330px;
+
+            flex-shrink: 0;
+
+            height: 420px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            position: relative;
+
+            box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2), 0 4px 10px rgba(0, 0, 0, 0.3);
+
+            color: white;
+
+            scroll-snap-align: center;
+
+        }
+
+
+
+        .blur-circle {
+
+            position: absolute;
+
+            width: 100px;
+
+            height: 100px;
+
+            background: #001f4a;
+
+            border: 4px solid white;
+
+            outline: 4px solid white;
+
+            filter: blur(10px);
+
+            border-radius: 50%;
+
+            top: 15%;
+
+            right: 15%;
+
+        }
+
+
+
+        .service-card img {
+
+            border-radius: 10px;
+
+            width: 100%;
+
+            height: 150px;
+
+            margin-top: 5px;
+
+            object-fit: cover;
+
+        }
+
+
+
+        /* Custom animation states */
+
+        #about {
+
+            opacity: 0;
+
+            transform: translateX(-100px);
+
+            transition: opacity 1s ease-out, transform 1s ease-out;
+
+            margin-top: 80px;
+
+        }
+
+
+
+        #about.active {
+
+            opacity: 1;
+
+            transform: translateX(0);
+
+        }
+
+
+
+        .btn-custom {
+
+            background: linear-gradient(to right, #001f4a, #62b3f9);
+
+            color: white;
+
+            padding: 12px 24px;
+
+            border-radius: 10px;
+
+            font-weight: bold;
+
+            font-size: 20px;
+
+            text-decoration: none;
+
+            display: inline-block;
+
+            transition: 0.3s;
+
+        }
+
+
+
+        .btn-custom:hover {
+
+            background: linear-gradient(to right, #62b3f9, #001f4a);
+
+            color: white;
+
+        }
+
+
+
+        .smallcard {
+
+            margin: 100px 0;
+
+            opacity: 0;
+
+            transform: translateY(100px);
+
+            transition: opacity 1s ease-out, transform 1s ease-out;
+
+        }
+
+
+
+        .smallcard.active {
+
+            opacity: 1;
+
+            transform: translateY(0);
+
+        }
+
+
+
+        .smcard {
+
+            background: linear-gradient(360deg, #001f4a, #62b3f9);
+
+            color: white;
+
+            padding: 30px 20px;
+
+            /* Reduced padding */
+
+            border-radius: 10px;
+
+            text-align: center;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            transition: transform 0.4s ease;
+
+            cursor: pointer;
+
+            height: auto;
+
+            /* Let content determine height */
+
+        }
+
+
+
+        .smcard:hover {
+
+            transform: scale(1.1);
+
+        }
+
+
+
+        .row:hover .smcard:not(:hover) {
+
+            filter: blur(5px);
+
+            transform: scale(0.9);
+
+        }
+
+
+
+        .map-content {
+
+            opacity: 0;
+
+            transform: translateX(-100px);
+
+            transition: opacity 1s ease-out, transform 1s ease-out;
+
+            /* Ensure smooth transition */
+
+        }
+
+
+
+        .map-content.active {
+
+            opacity: 1;
+
+            transform: translateX(0);
+
+        }
+
+
+
+
+
+        .img-box {
+
+            opacity: 0;
+
+            transform: translateY(220px);
+
+            transition: opacity 1s ease-out, transform 1s ease-out;
+
+        }
+
+
+
+        .active {
+
+            opacity: 1;
+
+            transform: translateY(0);
+
+        }
+
+
+
+        /* Custom styles to maintain the design of social media section */
+
+        .phone {
+
+            position: absolute;
+
+            width: 100%;
+
+            height: auto;
+
+            right: -5%;
+
+            bottom: -500px;
+
+            z-index: 5;
+
+        }
+
+
+
+        .down-vector {
+
+            margin-top: -220px;
+
+            z-index: 1;
+
+        }
+
+
+
+        @media (max-width: 1280px) {
+
+            .phone {
+
+                width: 100%;
+
+                right: 0;
+
+                top: -280px;
+
+            }
+
+
+
+            .down-vector {
+
+                display: none !important;
+
+            }
+
+        }
+
+
+
+        @media (max-width: 1020px) {
+
+            .phone {
+
+                display: none !important;
+
+            }
+
+        }
+
+
+
+        @media (max-width: 576px) {
+
+            .heading {
+
+                padding-right: 40px;
+
+            }
+
+        }
+
+
+
+        #social-media {
+
+            margin-top: 150px;
+
+            padding: 0;
+
+            opacity: 0;
+
+            transform: translateX(100px);
+
+            transition: opacity 1s ease-out, transform 1s ease-out;
+
+        }
+
+
+
+        #social-media.active {
+
+            opacity: 1;
+
+            transform: translateX(0);
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+
+    <!-- mouse  pointer-->
+
+    <div class="circle"></div>
+
+    <div class="circle"></div>
+
+    <div class="circle"></div>
+
+    <div class="circle"></div>
+
+    <div class="circle"></div>
+
+    <div class="circle"></div>
+
+    <div class="circle"></div>
+
+    <div class="circle"></div>
+
+    <div class="circle"></div>
+
+    <div class="circle"></div>
+
+    <div class="circle"></div>
+
+    <div class="circle"></div>
+
+    <div class="circle"></div>
+
+    <div class="circle"></div>
+
+    <div class="circle"></div>
+
+    <div class="circle"></div>
+
+    <div class="circle"></div>
+
+    <div class="circle"></div>
+
+    <div class="circle"></div>
+
+    <div class="circle"></div>
+
+
+
+    <!-- backToTop btn  -->
+
+
+
+    <button id="backToTop">Back to Top</button>
+
+
+
+
+
+    <!-- nav bar section  -->
+
+    <nav class="navbar navbar-expand-lg py-3">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+
+                <div class="logo-container">
+
+                    <img src="assets/logotag.jpg" alt="logo">
+
+                </div>
+
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+
+                <ul class="navbar-nav bg-white px-4 py-2 navbar-custom">
+
+                    <li class="nav-item"><a class="nav-link active" href="#"
+
+                            style="color: #6cb246; background: none;">HOME</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="about.html">ABOUT US</a></li>
+
+
+
+                    <li class="nav-item"><a class="nav-link" href="service.html">SERVICES</a></li>
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+
+                            aria-expanded="false">
+
+                            MARKETPLACE
+
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li><a class="dropdown-item" href="advertisers.html">Advertisers</a></li>
+
+                            <li><a class="dropdown-item" href="publishers.html">Publishers </a></li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="nav-item dropdown">
+
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+
+                            aria-expanded="false">
+
+                            MEDIA
+
+                        </a>
+
+                        <ul class="dropdown-menu">
+
+                            <li><a class="dropdown-item" href="news.html">News</a></li>
+
+                            <li><a class="dropdown-item" href="blog.html">Blogs</a></li>
+
+                            <li><a class="dropdown-item" href="portfolio.html">Portfolio</a></li>
+
+                        </ul>
+
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="career.html">CAREER</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="contact.html">CONTACT</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- carousel section  -->
+
+    <div id="teamCarousel" class="carousel slide carousel-container mt-5" data-bs-ride="carousel"
+
+        data-bs-interval="3000">
+
+        <div class="carousel-inner">
+
+            <div class="carousel-item active">
+
+                <img src="https://img.freepik.com/free-photo/medium-shot-business-team-working-together_23-2149271705.jpg?uid=R189197379&ga=GA1.1.2073105748.1744610447&semt=ais_hybrid&w=740"
+
+                    class="d-block carousel-img" alt="Team Meeting 1">
+
+            </div>
+
+            <div class="carousel-item">
+
+                <img src="https://img.freepik.com/free-photo/trans-person-working-office-with-colleagues_23-2149286965.jpg?uid=R189197379&ga=GA1.1.2073105748.1744610447&semt=ais_hybrid&w=740"
+
+                    class="d-block carousel-img" alt="Team Meeting 2">
+
+            </div>
+
+            <div class="carousel-item">
+
+                <img src="https://img.freepik.com/free-photo/businesspeople-working-as-team-with-laptop_1098-1748.jpg?t=st=1745822485~exp=1745826085~hmac=00e6aba00ae709434474aa21be0fceff11d110d14f2ee564ba2f5717fb95dcb3&w=996"
+
+                    class="d-block carousel-img" alt="Team Meeting 3">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- service-card section -->
+
+    <section class="py-5 service">
+
+        <div class="container bg-white py-3 px-md-6 rounded shadow position-relative" style="padding: 5rem;">
+
+            <div class="mb-4 p-2 bg-white rounded shadow-sm">
+
+                <h1 class="mb-0" style="color: #014a8a !important;">OUR SERVICES</h1>
+
+            </div>
+
+
+
+            <!-- Arrows inside the container with margin spacing -->
+
+            <button id="scrollLeft" class="btn position-absolute top-50 start-0 translate-middle-y ms-2 z-1 p-2">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+
+                    <path fill="#6cb246"
+
+                        d="m19.503 20.835l-16.51-7.363c-1.324-.59-1.324-2.354 0-2.944l16.51-7.363c1.495-.667 3.047.814 2.306 2.202l-3.152 5.904c-.245.459-.245 1 0 1.458l3.152 5.904c.74 1.388-.81 2.87-2.306 2.202" />
+
+                </svg>
+
+            </button>
+
+
+
+            <button id="scrollRight" class="btn position-absolute top-50 end-0 translate-middle-y me-2 z-1 p-2">
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24">
+
+                    <path fill="#6cb246"
+
+                        d="m4.497 20.835l16.51-7.363c1.324-.59 1.324-2.354 0-2.944L4.497 3.164c-1.495-.667-3.047.814-2.306 2.202l3.152 5.904c-.245.459-.245 1 0 1.458l-3.152 5.904c-.74 1.388.81 2.87 2.306 2.202" />
+
+                </svg>
+
+            </button>
+
+
+
+
+
+            <div class="overflow-hidden" id="scrollContainer">
+
+                <div class="d-flex gap-5 flex-nowrap pb-4 px-4 overflow-hidden">
+
+                    <!-- Repeatable Service Card -->
+
+                    <div class="position-relative service-card mx-2 flex-shrink-0"
+
+                        style="min-width: 200px; max-width: 90%;">
+
+                        <div class="blur-circle"></div>
+
+                        <div class="d-flex flex-column justify-content-center h-100 w-100 p-3 bg-white bg-opacity-10 rounded text-white shadow"
+
+                            style="backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
+
+                            <h3 class="fw-bold text-start">Affiliate Marketing</h3>
+
+                            <p class="text-start">Beneficial Performance Marketing Model. Affiliate marketing is a most prospective way to
+
+                                make revenue online.</p>
+
+                            <img src="https://img.freepik.com/free-photo/woman-working-with-computer-affiliate-marketing_53876-138648.jpg"
+
+                                alt="Affiliate Marketing">
+
+                        </div>
+
+                    </div>
+
+                    <div class="position-relative service-card mx-2 flex-shrink-0"
+
+                        style="min-width: 200px; max-width: 90%;">
+
+                        <div class="blur-circle"></div>
+
+                        <div class="d-flex flex-column justify-content-center h-100 w-100 p-3 bg-white bg-opacity-10 rounded text-white shadow"
+
+                            style="backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
+
+                            <h3 class="fw-bold text-start">Email Marketing</h3>
+
+                            <p class="text-start">Digital Sector Email Marketing is a boundless advertising medium for enhancing brand
+
+                                awareness
+
+                                via B2B & B2C sales.</p>
+
+                            <img src="https://img.freepik.com/free-photo/letter-envelop-message-notification-concept_53876-13786.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_hybrid"
+
+                                alt="Email Marketing">
+
+                        </div>
+
+                    </div>
+
+                    <div class="position-relative service-card mx-2 flex-shrink-0"
+
+                        style="min-width: 200px; max-width: 90%;">
+
+                        <div class="blur-circle"></div>
+
+                        <div class="d-flex flex-column justify-content-center h-100 w-100 p-3 bg-white bg-opacity-10 rounded text-white shadow"
+
+                            style="backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
+
+                            <h3 class="fw-bold text-start">Display Marketing</h3>
+
+                            <p class="text-start">Increase brand awareness and drive growth with Display Advertising, a leading digital
+
+                                marketing strategy.</p>
+
+                            <img src="https://img.freepik.com/free-photo/advertise-communication-digital-marketing-business-concept_53876-133825.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_hybrid"
+
+                                alt="Display Marketing">
+
+                        </div>
+
+                    </div>
+
+                    <div class="position-relative service-card mx-2 flex-shrink-0"
+
+                        style="min-width: 200px; max-width: 90%;">
+
+                        <div class="blur-circle"></div>
+
+                        <div class="d-flex flex-column justify-content-center h-100 w-100 p-3 bg-white bg-opacity-10 rounded text-white shadow"
+
+                            style="backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
+
+                            <h3 class="fw-bold text-start">Native Advertising</h3>
+
+                            <p class="text-start">Native ads blend seamlessly with content, ensuring a consistent user experience and
+
+                                natural functionality across platforms.</p>
+
+                            <img src="https://img.freepik.com/free-photo/diverse-people-thinking-planning-marketing-brand-concept_53876-64952.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_hybrid"
+
+                                alt="Native Advertising">
+
+                        </div>
+
+                    </div>
+
+                    <div class="position-relative service-card mx-2 flex-shrink-0"
+
+                        style="min-width: 200px; max-width: 90%;">
+
+                        <div class="blur-circle"></div>
+
+                        <div class="d-flex flex-column justify-content-center h-100 w-100 p-3 bg-white bg-opacity-10 rounded text-white shadow"
+
+                            style="backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
+
+                            <h3 class="fw-bold text-start">Social Media Marketing</h3>
+
+                            <p class="text-start">Social Media Marketing uses social platforms to promote products, making it a leading
+
+                                advertising tool.</p>
+
+                            <img src="https://img.freepik.com/free-photo/social-media-marketing-concept-marketing-with-applications_23-2150063134.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_hybrid"
+
+                                alt="Social Media Marketing">
+
+                        </div>
+
+                    </div>
+
+                    <div class="position-relative service-card mx-2 flex-shrink-0"
+
+                        style="min-width: 200px; max-width: 90%;">
+
+                        <div class="blur-circle"></div>
+
+                        <div class="d-flex flex-column justify-content-center h-100 w-100 p-3 bg-white bg-opacity-10 rounded text-white shadow"
+
+                            style="backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
+
+                            <h3 class="fw-bold text-start">Content Modulation</h3>
+
+                            <p class="text-start">Content drives digital business; we create clear, impactful content to engage and inform
+
+                                your
+
+                                customers.</p>
+
+                            <img src="https://img.freepik.com/free-photo/creativity-creative-ideas-imagination-inspiration-design-concept_53876-123736.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_hybrid"
+
+                                alt="Content Modulation">
+
+                        </div>
+
+                    </div>
+
+                    <div class="position-relative service-card mx-2 flex-shrink-0"
+
+                        style="min-width: 200px; max-width: 90%;">
+
+                        <div class="blur-circle"></div>
+
+                        <div class="d-flex flex-column justify-content-center h-100 w-100 p-3 bg-white bg-opacity-10 rounded text-white shadow"
+
+                            style="backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
+
+                            <h3 class="fw-bold text-start">HTML & Template Design</h3>
+
+                            <p class="text-start">Share your vision — we create stunning, user-focused designs that elevate your brand.</p>
+
+                            <img src="https://img.freepik.com/free-photo/still-life-graphic-design-office_23-2151345419.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_hybrid"
+
+                                alt="HTML & Template Design">
+
+                        </div>
+
+                    </div>
+
+                    <div class="position-relative service-card mx-2 flex-shrink-0"
+
+                        style="min-width: 200px; max-width: 90%;">
+
+                        <div class="blur-circle"></div>
+
+                        <div class="d-flex flex-column justify-content-center h-100 w-100 p-3 bg-white bg-opacity-10 rounded text-white shadow"
+
+                            style="backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
+
+                            <h3 class="fw-bold text-start">SEO</h3>
+
+                            <p class="text-start">A unique, effective strategy to boost organic traffic through higher search rankings on Google and other search engines.</p>
+
+                            <img src="https://img.freepik.com/free-photo/searching-engine-optimizing-seo-browsing-concept_53876-64993.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_hybrid"
+
+                                alt="SEO">
+
+                        </div>
+
+                    </div>
+
+                    <div class="position-relative service-card mx-2 flex-shrink-0"
+
+                        style="min-width: 200px; max-width: 90%;">
+
+                        <div class="blur-circle"></div>
+
+                        <div class="d-flex flex-column justify-content-center h-100 w-100 p-3 bg-white bg-opacity-10 rounded text-white shadow"
+
+                            style="backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.3);">
+
+                            <h3 class="fw-bold text-start">Lead Generation</h3>
+
+                            <p class="text-start">Lead generation drives interest, boosts sales, and grows online subscriptions.</p>
+
+                            <img src="https://img.freepik.com/free-photo/marketing-ideas-share-research-planning-concept_53876-127431.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179"
+
+                                alt="Lead Generation">
+
+                        </div>
+
+                    </div>
+
+                    <!-- Add more service cards similarly -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- About Section -->
+
+    <section class="mt-5" id="about">
+
+        <div class="container">
+
+            <div class="row g-4 p-4 bg-white shadow rounded-4 align-items-stretch">
+
+                <div class="col-md-5 d-flex">
+
+                    <img src="https://img.freepik.com/free-photo/modern-equipped-computer-lab_23-2149241213.jpg?uid=R189197379&ga=GA1.1.208303102.1739859179&semt=ais_hybrid"
+
+                        class="img-fluid w-100 h-100 object-fit-cover rounded-4" alt="About Image">
+
+                </div>
+
+                <div class="col-md-7">
+
+                    <h2 class="fs-2 fw-bold bg-white p-3 rounded-3 shadow d-inline-block" style="color: #014a8a;">
+
+                        About Century Media<span style="color: #6cb246">360</span>
+
+                    </h2>
+
+                    <h4 class="fs-4 fw-semibold bg-white p-2 rounded-3 shadow d-inline-block mt-3"
+
+                        style="color: #014a8a;">
+
+                        Your Global Digital Partner
+
+                    </h4>
+
+                    <p class="mt-4 fs-5">
+
+                        Empower your business and build enduring relationships with clients through our comprehensive
+
+                        and personalized digital marketing solutions that include SEO, social media marketing, content
+
+                        marketing, email marketing, and much more to engage new clients and communicate with existing
+
+                        ones.
+
+                    </p>
+
+                    <a href="about.html" class="btn-custom mt-3">
+
+                        Read More
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Small Cards Section -->
+
+    <section class="smallcard py-5">
+
+        <div class="container text-center">
+
+            <div class="row g-5 justify-content-center">
+
+                <div class="col-12 col-md-4">
+
+                    <div class="smcard h-100">
+
+                        <h3 class="fw-bold mb-2">Trusted Industry Expert</h3>
+
+                        <p class="mb-0">
+
+                            We as 'Professionals' believe in service & remit, as our decorated team focuses on the
+
+                            client's priority ethically.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-4">
+
+                    <div class="smcard h-100">
+
+                        <h3 class="fw-bold mb-2">Beyond Digital Planning</h3>
+
+                        <p class="mb-0">
+
+                            Our strategic work resembles out-of-the-box thoughts to look beyond your goals innovatively
+
+                            and effectively.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-12 col-md-4">
+
+                    <div class="smcard h-100">
+
+                        <h3 class="fw-bold mb-2">Leading with Impact</h3>
+
+                        <p class="mb-0">
+
+                            We prioritize client's needs & analyze through creative and contents to embrace a
+
+                            competitive delicacy.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Map Section -->
+
+    <section class="py-5 mt-5 bg-white">
+
+        <div class="container">
+
+            <div class="row align-items-center gy-4">
+
+                <!-- Left Text Content -->
+
+                <div class="col-md-6 map-content">
+
+                    <div class="d-flex align-items-center mb-2">
+
+                        <div class="rounded-pill" style="width: 60px; height: 5px; background-color: #014a8a;"></div>
+
+                        <h2 class="mb-0 ms-3 fw-bold" style="color: #014a8a;">How we do it?</h2>
+
+                    </div>
+
+                    <h4 class="fs-4 fw-bold bg-white p-2 rounded-3 shadow d-inline-block my-3" style="color: #014a8a;">
+
+                        Strategic Digital Solutions Worldwide
+
+                    </h4>
+
+
+
+                    <div class="row mt-3">
+
+                        <!-- Box 1 -->
+
+                        <div class="col-md-4 mb-4">
+
+                            <img src="assets/home_map_icon1.png" width="50" alt="Icon">
+
+                            <h5 class="mt-3 fw-bold" style="color: #014a8a;">Data-Driven Digital Marketing</h5>
+
+                            <p class="text-secondary">Leverage analytics to create data-driven marketing strategies that
+
+                                enhance engagement, boost conversions, and maximize ROI.</p>
+
+                        </div>
+
+                        <!-- Box 2 -->
+
+                        <div class="col-md-4 mb-4">
+
+                            <img src="assets/home_map_icon2.png" width="50" alt="Icon">
+
+                            <h5 class="mt-3 fw-bold" style="color: #014a8a;">Engaging & Impactful Content</h5>
+
+                            <p class="text-secondary">Craft impactful content that engages audiences, boosts loyalty,
+
+                                and drives conversions across social media and email marketing.</p>
+
+                        </div>
+
+                        <!-- Box 3 -->
+
+                        <div class="col-md-4 mb-4">
+
+                            <img src="assets/home_map_icon3.png" width="50" alt="Icon">
+
+                            <h5 class="mt-3 fw-bold" style="color: #014a8a;">Seamless Client Communication</h5>
+
+                            <p class="text-secondary">Foster lasting client relationships with targeted digital
+
+                                interactions, ensuring trust, consistency, and long-term growth.</p>
+
+                        </div>
+
+                    </div>
+
+                    <a href="portfolio.html" class="btn btn-custom mt-3">Our Works</a>
+
+                </div>
+
+
+
+                <!-- Right Image -->
+
+                <div class="col-md-6 text-center img-box">
+
+                    <img src="assets/map.png" class="img-fluid rounded" alt="Idea Mapping">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- social media section  -->
+
+    <section class="container-fluid text-white position-relative" id="social-media">
+
+        <div class="text-start">
+
+            <div class="row justify-content-center align-items-center">
+
+                <div class="col-lg-5">
+
+                    <!-- Heading -->
+
+                    <div class="bg-white px-4 py-3 rounded-4 position-absolute w-70 fw-bold text-start"
+
+                        style="top: -3rem; color: #014a8a;">
+
+                        <h2 class="fw-bold mb-0">Amplify Your Brand with Powerful <br> Social Media Strategies</h2>
+
+                    </div>
+
+
+
+                    <!-- Blue card -->
+
+                    <div class="text-white rounded-4 p-4 pt-5 mt-4" style="background-color: #014a8a; font-size: 22px;">
+
+                        <p>Join us on social media and unlock the power of strategic digital marketing. From SEO and
+
+                            content
+
+                            marketing to social media and email campaigns, we help businesses grow, engage new clients,
+
+                            and
+
+                            build lasting relationships. Stay updated with the latest trends, insights, and strategies
+
+                            to
+
+                            elevate your brand’s online presence.<br><a href="index.html"
+
+                                style="text-decoration: none; color: white;"><b>#centurymedia360</b></a></p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="col-lg-5 position-relative">
+
+                    <!-- Phone Image -->
+
+                    <img src="assets/social ph.png" class="phone" alt="social media">
+
+                </div>
+
+            </div>
+
+
+
+            <div class="row d-none d-md-block down-vector">
+
+                <img src="assets/Vector 1.png" alt="down vector" class="img-fluid" style="width: 100%; padding: 0;">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Footer  -->
+
+    <footer class="container bg-white text-start my-5 footer">
+
+        <div class="row">
+
+            <!-- Company Info -->
+
+            <div class="col-md-4">
+
+                <h5>Century Media360</h5>
+
+                <p>A Trusted Advertising Agency in UK - Experienced in Digital Branding & Advertisement, renowned for
+
+                    its Commitment & Gratitude towards Clients Service.</p>
+
+            </div>
+
+
+
+            <!-- Services -->
+
+            <div class="col-md-2">
+
+                <h5>Service</h5>
+
+                <ul class="list-unstyled">
+
+                    <li><a href="service.html">Affiliate Marketing</a></li>
+
+                    <li><a href="service.html">Email Marketing</a></li>
+
+                    <li><a href="service.html">Data Analysis</a></li>
+
+                    <li><a href="service.html">Web Design</a></li>
+
+                    <li><a href="service.html">Development</a></li>
+
+                    <li><a href="service.html">SEO</a></li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- Company Links -->
+
+            <div class="col-md-2">
+
+                <h5>Company</h5>
+
+                <ul class="list-unstyled">
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="about.html">About Us</a></li>
+
+                    <li><a href="service.html">Services</a></li>
+
+                    <li><a href="advertisers.html">Marketplace</a></li>
+
+                    <li><a href="blog.html">Media</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+
+
+            <!-- Newsletter -->
+
+            <div class="col-md-4">
+
+                <h5>Join a Newsletter</h5>
+
+                <input type="email" class="newsletter-input" placeholder="Enter Your Email">
+
+                <button class="subscribe-btn w-100 mt-2">Subscribe</button>
+
+                <!-- Social Icons -->
+
+                <div class="social-icons mt-3">
+
+                    <a href="https://www.linkedin.com/company/centurymedia360/posts/?feedView=all" target="_blank"
+
+                        title="Linkedin"><i class="fab fa-linkedin-in text-white"></i></a>
+
+                    <a href="https://www.facebook.com/centurymedia360/" target="_blank" title="Facebook"><i
+
+                            class="fab fa-facebook-f text-white"></i></a>
+
+                    <a href="https://www.instagram.com/centurymedia360/" target="_blank" title="Instagram"> <i
+
+                            class="fab fa-instagram text-white"></i></a>
+
+                    <a href="https://x.com/centurymedia360" target="_blank" title="twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="currentColor" d="M9.294 6.928L14.357 1h-1.2L8.762 6.147L5.25 1H1.2l5.31 7.784L1.2 15h1.2l4.642-5.436L10.751 15h4.05zM7.651 8.852l-.538-.775L2.832 1.91h1.843l3.454 4.977l.538.775l4.491 6.47h-1.843z"/></svg></a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Footer Bottom -->
+
+        <div class="footer-bottom mt-3 d-flex justify-content-around">
+
+            <p>&copy; Century Media360. All rights reserved 2017 - 2025.</p>
+
+            <p>
+
+                📍 The Pied Horse, Hatfield Road, United Kingdom |
+
+                ✉️ <a href="mailto:info@centurymedia360.com">info@centurymedia360.com</a> |
+
+                📞 +44 738 689 9960
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- Footer ends  -->
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <!-- JavaScript to trigger the opacity and transform changes after the page loads. -->
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const sections = document.querySelectorAll("section");
+
+
+
+            const observer = new IntersectionObserver(entries => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("active");
+
+                    }
+
+                });
+
+            }, { threshold: 0.2 });
+
+
+
+            sections.forEach(section => {
+
+                observer.observe(section);
+
+            });
+
+        });
+
+    </script>
+
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const mapContent = document.querySelector('.map-content');
+
+
+
+            const observer = new IntersectionObserver(entries => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("active");
+
+                    }
+
+                });
+
+            }, { threshold: 0.2 });
+
+
+
+            observer.observe(mapContent); // Observe only the map-content section
+
+        });
+
+
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const sections = document.querySelectorAll("section");
+
+
+
+            const observer = new IntersectionObserver(entries => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+
+                        entry.target.classList.add("active");
+
+                    }
+
+                });
+
+            }, { threshold: 0.2 });
+
+
+
+            sections.forEach(section => {
+
+                observer.observe(section);
+
+            });
+
+
+
+            // Add observer for .img-box specifically
+
+            const imgBox = document.querySelector('.img-box');
+
+            observer.observe(imgBox);  // Observe the img-box to trigger the active class
+
+        });
+
+
+
+
+
+    </script>
+
+
+
+    <!-- script for right and left  -->
+
+    <script>
+
+        const scrollContainer = document.querySelector('#scrollContainer .d-flex');
+
+        const scrollLeftBtn = document.getElementById('scrollLeft');
+
+        const scrollRightBtn = document.getElementById('scrollRight');
+
+        const cards = document.querySelectorAll('.service-card');
+
+
+
+        const scrollToCard = (index) => {
+
+            const card = cards[index];
+
+            const cardRect = card.getBoundingClientRect();
+
+            const containerRect = scrollContainer.getBoundingClientRect();
+
+            const offset = card.offsetLeft - (scrollContainer.offsetWidth / 2) + (card.offsetWidth / 2);
+
+            scrollContainer.scrollTo({ left: offset, behavior: 'smooth' });
+
+        };
+
+
+
+        let currentIndex = 0;
+
+        const maxIndex = cards.length - 1;
+
+
+
+        scrollRightBtn.addEventListener('click', () => {
+
+            currentIndex = Math.min(currentIndex + 1, maxIndex);
+
+            scrollToCard(currentIndex);
+
+        });
+
+
+
+        scrollLeftBtn.addEventListener('click', () => {
+
+            currentIndex = Math.max(currentIndex - 1, 0);
+
+            scrollToCard(currentIndex);
+
+        });
+
+
+
+        window.addEventListener('load', () => {
+
+            scrollToCard(currentIndex);
+
+        });
+
+    </script>
+
+
+
+    <!-- script for mouse pointer  -->
+
+    <script>
+
+        const coords = { x: 0, y: 0 };
+
+        const circles = document.querySelectorAll(".circle");
+
+
+
+        const colors = [
+
+            "#014a8a", "#04508f", "#0a5a97", "#1365a0", "#1a70a8", // Deep to Medium Blue
+
+            "#2682c0", "#2e8dcb", "#3699d6", "#3ea4e1", "#47b0ec", // Light Blue to Teal Transition
+
+            "#4fadf0", "#5ab352", "#64b957", "#6bb04b", "#72b651", // Teal to Green Transition
+
+            "#6cb246", "#7fc157", "#86c85a", "#8ecd61", "#95d367", // Light Green
+
+            "#9cd96e", "#a4df74" // Bright Green End
+
+        ];
+
+
+
+        circles.forEach(function (circle, index) {
+
+            circle.x = 0;
+
+            circle.y = 0;
+
+            circle.style.backgroundColor = colors[index % colors.length];
+
+        });
+
+
+
+        window.addEventListener("mousemove", function (e) {
+
+            coords.x = e.clientX;
+
+            coords.y = e.clientY;
+
+
+
+        });
+
+
+
+        function animateCircles() {
+
+
+
+            let x = coords.x;
+
+            let y = coords.y;
+
+
+
+            circles.forEach(function (circle, index) {
+
+                circle.style.left = x - 12 + "px";
+
+                circle.style.top = y - 12 + "px";
+
+
+
+                circle.style.scale = (circles.length - index) / circles.length;
+
+
+
+                circle.x = x;
+
+                circle.y = y;
+
+
+
+                const nextCircle = circles[index + 1] || circles[0];
+
+                x += (nextCircle.x - x) * 0.3;
+
+                y += (nextCircle.y - y) * 0.3;
+
+            });
+
+
+
+            requestAnimationFrame(animateCircles);
+
+        }
+
+
+
+        animateCircles();
+
+    </script>
+
+
+
+    <script>
+
+        const backToTopButton = document.getElementById('backToTop');
+
+
+
+        window.addEventListener('scroll', () => {
+
+            if (window.scrollY > 300) {
+
+                backToTopButton.style.display = 'block';
+
+            } else {
+
+                backToTopButton.style.display = 'none';
+
+            }
+
+        });
+
+
+
+        backToTopButton.addEventListener('click', () => {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: 'smooth'
+
+            });
+
+        });
+
+    </script>
+
+
+
+</body>
+
+
+
+
 </html>
